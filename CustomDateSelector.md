@@ -63,6 +63,7 @@ UpdateContext({visGalYear:false});
 ```
 これで年の選択部分ができました。
 実際動作させると以下のようになります。
+
 ![out1.gif](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/202779/3a6c4b9c-77d4-22b4-381e-0925f99cf827.gif)
 
 ## 月 選択
@@ -72,6 +73,7 @@ UpdateContext({visGalYear:false});
 ```btnDispMonth.Text
 Upper(Text(dateSelected,"mmm"))
 ```
+
 ```btnDispMonth.OnSelect
 UpdateContext({visGalMonth:true});
 ```
@@ -118,13 +120,15 @@ FirstN([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,
 DateDiff(DateAdd(...)))部分がそれにあたります。
 
 DateDiffは2つの日付の間にある日数をカウントする関数です。ここでやっているのは、
-```Date(Year(dateSelected),Month(dateSelected),1)```、まずここで選択した年・月の1日を指定し、```Date(Year(dateSelected),Month(dateSelected)+1,1)```次の月の1日との間にある日数、つまり月の日数を出しています。
+
+```Date(Year(dateSelected),Month(dateSelected),1)``` まずここで選択した年・月の1日を指定し、```Date(Year(dateSelected),Month(dateSelected)+1,1)``` 次の月の1日との間にある日数、つまり月の日数を出しています。
 
 ```btnDaySelect.OnSelect
 Set(dateSelected,
 Date(Year(dateSelected),Month(dateSelected),ThisItem.Value));
 UpdateContext({visGalDay:false});
 ```
+
 実際動作させると以下のようになります。
 
 ![out3.gif](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/202779/d5cfbd29-16da-58a4-716e-2ff98f49184d.gif)
