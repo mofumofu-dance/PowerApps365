@@ -5,7 +5,7 @@
 
 
 # SharePoint List
-SharePoint listは2つ用意してください
+アプリからはデータ接続を削除しています。別途SharePoint listを2つ用意し、データ接続を追加してください。
 
 ## 1. WorkItems
 
