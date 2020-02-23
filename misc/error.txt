@@ -1,0 +1,29 @@
+WebAuthoring abnormal termination.
+Client date/time: 2020-02-23T13:48:01.186Z
+Version: 3.20014.23 (v3.20014.23.140670034)
+Session ID: 04b10b64-586c-4d0a-b629-20260e01cd2e
+description: {"exception":{"message":"XMLHttpRequest error(string). {\"traceLevel\":3,\"message\":\"An error occurred in Document API document.publishtoblobasync, activity id 52cb4950-ab0b-4e18-b9c1-b411f50f47b8\",\"status\":500}","name":"UnhandledError","_isCritical":true,"detail":{"exception":{}}},"error":"[circular]","promise":{"_oncancel":null,"_nextState":null,"_state":{"name":"error","enter":"[function]","cancel":"[function]","done":null,"then":null,"_completed":"[function]","_error":"[function]","_notify":"[function]","_progress":"[function]","_setCompleteValue":"[function]","_setErrorValue":"[function]"},"_value":"[circular]","_isException":false,"_errorId":23,"done":"[function]","then":"[function]"},"id":23,"setPromise":"[function]"}
+stack: UnhandledError: XMLHttpRequest error(string). {"traceLevel":3,"message":"An error occurred in Document API document.publishtoblobasync, activity id 52cb4950-ab0b-4e18-b9c1-b411f50f47b8","status":500}
+    at t [as constructor] (https://cdn-paaprodwus.azureedge.net/v3.20014.23.140670034/studio/js/Core.js?v=3.20014.23.140670034:1:123063)
+    at new t (https://cdn-paaprodwus.azureedge.net/v3.20014.23.140670034/studio/js/Core.js?v=3.20014.23.140670034:1:213258)
+    at o._translateError (https://cdn-paaprodwus.azureedge.net/v3.20014.23.140670034/studio/js/AppMagic.WebAuthoring.js?v=3.20014.23.140670034:1:471433)
+    at o._raiseTerminalError (https://cdn-paaprodwus.azureedge.net/v3.20014.23.140670034/studio/js/AppMagic.WebAuthoring.js?v=3.20014.23.140670034:1:470715)
+    at o._unhandledException (https://cdn-paaprodwus.azureedge.net/v3.20014.23.140670034/studio/js/AppMagic.WebAuthoring.js?v=3.20014.23.140670034:1:470628)
+    at o.<anonymous> (https://cdn-paaprodwus.azureedge.net/v3.20014.23.140670034/studio/js/AppMagic.WebAuthoring.js?v=3.20014.23.140670034:1:469474)
+    at https://cdn-paaprodwus.azureedge.net/v3.20014.23.140670034/studio/js/Core.js?v=3.20014.23.140670034:1:277619
+    at Object.throw (https://cdn-paaprodwus.azureedge.net/v3.20014.23.140670034/studio/js/Core.js?v=3.20014.23.140670034:1:277725)
+    at u (https://cdn-paaprodwus.azureedge.net/v3.20014.23.140670034/studio/js/Core.js?v=3.20014.23.140670034:1:276544)
+    at Object.q [as _notify] (https://cdn-paaprodwus.azureedge.net/v3.20014.23.140670034/studio/openSource/modified/winjs/js/base.js?v=3.20014.23.140670034:2:38070)
+errorNumber: 0
+errorMessage: XMLHttpRequest error(string). {"traceLevel":3,"message":"An error occurred in Document API document.publishtoblobasync, activity id 52cb4950-ab0b-4e18-b9c1-b411f50f47b8","status":500}
+callStack: UnhandledError: XMLHttpRequest error(string). {"traceLevel":3,"message":"An error occurred in Document API document.publishtoblobasync, activity id 52cb4950-ab0b-4e18-b9c1-b411f50f47b8","status":500}
+    at t [as constructor] (https://cdn-paaprodwus.azureedge.net/v3.20014.23.140670034/studio/js/Core.js?v=3.20014.23.140670034:1:123063)
+    at new t (https://cdn-paaprodwus.azureedge.net/v3.20014.23.140670034/studio/js/Core.js?v=3.20014.23.140670034:1:213258)
+    at o._translateError (https://cdn-paaprodwus.azureedge.net/v3.20014.23.140670034/studio/js/AppMagic.WebAuthoring.js?v=3.20014.23.140670034:1:471433)
+    at o._raiseTerminalError (https://cdn-paaprodwus.azureedge.net/v3.20014.23.140670034/studio/js/AppMagic.WebAuthoring.js?v=3.20014.23.140670034:1:470715)
+    at o._unhandledException (https://cdn-paaprodwus.azureedge.net/v3.20014.23.140670034/studio/js/AppMagic.WebAuthoring.js?v=3.20014.23.140670034:1:470628)
+    at o.<anonymous> (https://cdn-paaprodwus.azureedge.net/v3.20014.23.140670034/studio/js/AppMagic.WebAuthoring.js?v=3.20014.23.140670034:1:469474)
+    at https://cdn-paaprodwus.azureedge.net/v3.20014.23.140670034/studio/js/Core.js?v=3.20014.23.140670034:1:277619
+    at Object.throw (https://cdn-paaprodwus.azureedge.net/v3.20014.23.140670034/studio/js/Core.js?v=3.20014.23.140670034:1:277725)
+    at u (https://cdn-paaprodwus.azureedge.net/v3.20014.23.140670034/studio/js/Core.js?v=3.20014.23.140670034:1:276544)
+    at Object.q [as _notify] (https://cdn-paaprodwus.azureedge.net/v3.20014.23.140670034/studio/openSource/modified/winjs/js/base.js?v=3.20014.23.140670034:2:38070)
