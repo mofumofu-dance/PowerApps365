@@ -38,7 +38,9 @@
               "properties": {
                 "to": {
                   "type": "string",
-                  "description": "to"
+                  "description": "to",
+                  "title": "",
+                  "x-ms-visibility": "important"
                 },
                 "messages": {
                   "type": "array",
@@ -51,7 +53,8 @@
                       },
                       "text": {
                         "type": "string",
-                        "description": "text"
+                        "description": "text",
+                        "title": ""
                       }
                     }
                   },
@@ -83,7 +86,10 @@
                   }
                 ],
                 "notificationDisabled": false
-              }
+              },
+              "required": [
+                "to"
+              ]
             },
             "required": true
           }
@@ -119,7 +125,9 @@
               "properties": {
                 "replyToken": {
                   "type": "string",
-                  "description": "replyToken"
+                  "description": "replyToken",
+                  "title": "",
+                  "x-ms-visibility": "important"
                 },
                 "messages": {
                   "type": "array",
@@ -164,7 +172,10 @@
                   }
                 ],
                 "notificationDisabled": false
-              }
+              },
+              "required": [
+                "replyToken"
+              ]
             },
             "required": true
           }
