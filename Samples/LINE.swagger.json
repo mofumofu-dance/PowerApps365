@@ -1,0 +1,193 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "LINE Messaging API",
+    "description": "LINE Messaging API"
+  },
+  "host": "api.line.me",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/v2/bot/message/push": {
+      "post": {
+        "summary": "Send Push Message",
+        "description": "Send Push Message",
+        "operationId": "SendPushMessage",
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "default": " application/json",
+            "description": "Content-Type",
+            "x-ms-visibility": "internal"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "to": {
+                  "type": "string",
+                  "description": "to"
+                },
+                "messages": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "type": "string",
+                        "description": "type"
+                      },
+                      "text": {
+                        "type": "string",
+                        "description": "text"
+                      }
+                    }
+                  },
+                  "description": "messages"
+                },
+                "notificationDisabled": {
+                  "type": "boolean",
+                  "description": "notificationDisabled",
+                  "title": "",
+                  "enum": [
+                    "",
+                    true,
+                    false
+                  ],
+                  "default": false,
+                  "x-ms-visibility": "advanced"
+                }
+              },
+              "default": {
+                "to": "nHuyWiB7yP5Zw52FIkcQobQuGDXCTA",
+                "messages": [
+                  {
+                    "type": "text",
+                    "text": "May I help you?"
+                  },
+                  {
+                    "type": "text",
+                    "text": "May I help you?"
+                  }
+                ],
+                "notificationDisabled": false
+              }
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        }
+      }
+    },
+    "/v2/bot/message/reply": {
+      "post": {
+        "summary": "Send Reply Message",
+        "description": "Send Reply Message",
+        "operationId": "SendReplyMessage",
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "default": " application/json",
+            "description": "Content-Type",
+            "x-ms-visibility": "internal"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "replyToken": {
+                  "type": "string",
+                  "description": "replyToken"
+                },
+                "messages": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "type": "string",
+                        "description": "type"
+                      },
+                      "text": {
+                        "type": "string",
+                        "description": "text"
+                      }
+                    }
+                  },
+                  "description": "messages"
+                },
+                "notificationDisabled": {
+                  "type": "boolean",
+                  "description": "notificationDisabled",
+                  "title": "",
+                  "enum": [
+                    "",
+                    true,
+                    false
+                  ],
+                  "default": false,
+                  "x-ms-visibility": "advanced"
+                }
+              },
+              "default": {
+                "replyToken": "nHuyWiB7yP5Zw52FIkcQobQuGDXCTA",
+                "messages": [
+                  {
+                    "type": "text",
+                    "text": "May I help you?"
+                  },
+                  {
+                    "type": "text",
+                    "text": "May I help you?"
+                  }
+                ],
+                "notificationDisabled": false
+              }
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        }
+      }
+    }
+  },
+  "definitions": {},
+  "parameters": {},
+  "responses": {},
+  "securityDefinitions": {
+    "api_key": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Authorization"
+    }
+  },
+  "security": [],
+  "tags": []
+}
