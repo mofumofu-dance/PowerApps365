@@ -1,0 +1,118 @@
+[
+  {
+    "type": "flex",
+    "altText": "購入申請がありました",
+    "contents": {
+      "type": "bubble",
+      "hero": {
+        "type": "image",
+        "url": "https://2.bp.blogspot.com/-ZCsTvsjxooM/U2Luwul3zDI/AAAAAAAAfwQ/No8KXBeFofI/s800/message_yoroshiku.png",
+        "size": "xl",
+        "aspectMode": "fit"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "@{body('Create_item')['Title']}",
+            "weight": "bold",
+            "size": "xl",
+            "wrap": true,
+            "action": {
+              "type": "uri",
+              "uri": "@{body('Create_item')?['URL']}"
+            }
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "margin": "lg",
+            "spacing": "sm",
+            "contents": [
+              {
+                "type": "box",
+                "layout": "baseline",
+                "spacing": "sm",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "金額",
+                    "color": "#aaaaaa",
+                    "size": "md",
+                    "flex": 3
+                  },
+                  {
+                    "type": "text",
+                    "text": "￥@{body('Create_item')?['Price']}",
+                    "wrap": false,
+                    "color": "#666666",
+                    "size": "md",
+                    "flex": 5
+                  }
+                ]
+              },
+              {
+                "type": "box",
+                "layout": "baseline",
+                "spacing": "sm",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "備考・理由",
+                    "color": "#aaaaaa",
+                    "size": "sm",
+                    "flex": 3
+                  },
+                  {
+                    "type": "text",
+                    "text": "@{body('Create_item')?['Comment']}",
+                    "wrap": true,
+                    "color": "#666666",
+                    "size": "sm",
+                    "flex": 5
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "sm",
+        "contents": [
+          {
+            "type": "button",
+            "style": "primary",
+            "height": "sm",
+            "action": {
+              "type": "postback",
+              "label": "OKです",
+              "data": "action=承認&id=@{body('Create_item')?['ID']}",
+              "displayText": "OKです"
+            }
+          },
+          {
+            "type": "button",
+            "style": "secondary",
+            "height": "sm",
+            "action": {
+              "type": "postback",
+              "label": "ダメです",
+              "data": "action=却下&id=@{body('Create_item')?['ID']}",
+              "displayText": "ダメです"
+            }
+          },
+          {
+            "type": "spacer",
+            "size": "sm"
+          }
+        ],
+        "flex": 0
+      }
+    }
+  }
+]
