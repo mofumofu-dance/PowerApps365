@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" charset="utf-8">
+<style>
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+p.title{
+font-size:13pt;
+font-weight:bold;
+}
+</style>
+</head>
+<body>
+<p style="text-align:center;font-size:18pt;font-weight:bold">購入稟議申請一覧</p>
+<p class="title">ステータス:申請済み</p>
+<table id="customers">
+  <tr>
+    <th>商品</th>
+    <th>申請者</th>
+    <th>金額</th>
+    <th>申請日</th>
+    <th>ステータス</th>
+<th>Id</th>
+  </tr>
+@{body('Join')}
+</table>
+
+<p class="title">ステータス:承認</p>
+<table id="customers">
+  <tr>
+    <th>商品</th>
+    <th>申請者</th>
+    <th>金額</th>
+    <th>申請日</th>
+    <th>ステータス</th>
+<th>Id</th>
+  </tr>
+@{body('Join_2')}
+</table>
+
+<p class="title">ステータス:却下</p>
+<table id="customers">
+  <tr>
+    <th>商品</th>
+    <th>申請者</th>
+    <th>金額</th>
+    <th>申請日</th>
+    <th>ステータス</th>
+<th>Id</th>
+  </tr>
+@{body('Join_3')}
+</table>
+
+</body>
+</html>
