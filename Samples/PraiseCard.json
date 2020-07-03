@@ -1,0 +1,101 @@
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.2",
+    "speak": "Praise Card!",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "Thank you for your cooperation",
+            "size": "Large",
+            "weight": "Bolder"
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "width": "auto",
+                            "items": [
+                                {
+                                    "type": "Image",
+                                    "url": "https://teams.microsoft.com/api/mt/emea/beta/users/<UPN>/profilepicturev2?displayname=<Displayname>&voidCache=false",
+                                    "size": "Medium",
+                                    "horizontalAlignment": "Center"
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "<at>DisplayName</at>",
+                                    "horizontalAlignment": "Center",
+                                    "weight": "Bolder"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Column",
+                            "width": "stretch",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "This is TEST Message \n\n New line \n\n AAAAA",
+                                    "wrap": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 50,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "DisplayName2",
+                            "horizontalAlignment": "Right",
+                            "height": "stretch",
+                            "spacing": "Medium"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://teams.microsoft.com/api/mt/emea/beta/users/<UPN2>/profilepicturev2?displayname=DisplayName2&voidCache=false",
+                            "size": "Small",
+                            "horizontalAlignment": "Right"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.Submit",
+            "title": "Boost"
+        }
+    ],
+    "msteams": {
+        "entities": [
+            {
+                "type": "mention",
+                "text": "<at>DisplayName</at>",
+                "mentioned": {
+                    "id": "8:orgid:UserID",
+                    "name": "DisplayName"
+                }
+            }
+        ]
+    }
+}
