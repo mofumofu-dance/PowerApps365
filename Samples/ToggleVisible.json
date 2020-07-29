@@ -1,0 +1,48 @@
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.2",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "Item1",
+            "size": "ExtraLarge",
+            "id": "item1"
+        },
+        {
+            "type": "ActionSet",
+            "actions": [
+                {
+                    "type": "Action.ToggleVisibility",
+                    "title": "Button1",
+                    "targetElements":[
+                        "item2",
+                        "button2"
+                    ]
+                }
+            ],
+            "id": "button1"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Item2",
+            "size": "ExtraLarge",
+            "color": "Attention",
+            "id": "item2"
+        },
+        {
+            "type": "ActionSet",
+            "actions": [
+                {
+                    "type": "Action.ToggleVisibility",
+                    "title": "Button2",
+                    "targetElements": [
+                        "item1",
+                        "button1"
+                    ]
+                }
+            ],
+            "id": "button2"
+        }
+    ]
+}
