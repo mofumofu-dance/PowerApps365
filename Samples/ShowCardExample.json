@@ -1,0 +1,366 @@
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.2",
+    "body": [
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "チケットのステータス別一覧です。\n\n確認して、Newは可能な限り分析を開始してください。",
+                    "wrap": true
+                }
+            ],
+            "style": "accent"
+        },
+        {
+            "type": "ActionSet",
+            "actions": [
+                {
+                    "type": "Action.ShowCard",
+                    "title": "New",
+                    "card": {
+                        "type": "AdaptiveCard",
+                        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+                        "version": "1.2",
+                        "body": [
+                            {
+                                "type": "ColumnSet",
+                                "columns": [
+                                    {
+                                        "type": "Column",
+                                        "width": 30,
+                                        "items": [
+                                            {
+                                                "type": "TextBlock",
+                                                "text": "#15101",
+                                                "weight": "Bolder"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "Column",
+                                        "width": 70,
+                                        "items": [
+                                            {
+                                                "type": "TextBlock",
+                                                "wrap": true,
+                                                "text": "経費精算画面でXXXのエラーが表示される"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "separator": true
+                            },
+                            {
+                                "type": "ColumnSet",
+                                "columns": [
+                                    {
+                                        "type": "Column",
+                                        "width": 30,
+                                        "items": [
+                                            {
+                                                "type": "TextBlock",
+                                                "text": "#15101",
+                                                "weight": "Bolder"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "Column",
+                                        "width": 70,
+                                        "items": [
+                                            {
+                                                "type": "TextBlock",
+                                                "wrap": true,
+                                                "text": "経費精算画面でXXXのエラーが表示される"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "separator": true
+                            },
+                            {
+                                "type": "ColumnSet",
+                                "columns": [
+                                    {
+                                        "type": "Column",
+                                        "width": 30,
+                                        "items": [
+                                            {
+                                                "type": "TextBlock",
+                                                "text": "#15101",
+                                                "weight": "Bolder"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "Column",
+                                        "width": 70,
+                                        "items": [
+                                            {
+                                                "type": "TextBlock",
+                                                "wrap": true,
+                                                "text": "経費精算画面でXXXのエラーが表示される"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "separator": true
+                            }
+                        ]
+                    },
+                    "style": "positive"
+                },
+                {
+                    "type": "Action.ShowCard",
+                    "card": {
+                        "type": "AdaptiveCard",
+                        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+                        "version": "1.2",
+                        "body": [
+                            {
+                                "type": "ColumnSet",
+                                "columns": [
+                                    {
+                                        "type": "Column",
+                                        "width": 30,
+                                        "items": [
+                                            {
+                                                "type": "TextBlock",
+                                                "text": "#13202",
+                                                "weight": "Bolder"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "Column",
+                                        "width": 70,
+                                        "items": [
+                                            {
+                                                "type": "TextBlock",
+                                                "wrap": true,
+                                                "text": "Automateで承認フローの作成方法"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "separator": true
+                            },
+                            {
+                                "type": "ColumnSet",
+                                "columns": [
+                                    {
+                                        "type": "Column",
+                                        "width": 30,
+                                        "items": [
+                                            {
+                                                "type": "TextBlock",
+                                                "text": "#13202",
+                                                "weight": "Bolder"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "Column",
+                                        "width": 70,
+                                        "items": [
+                                            {
+                                                "type": "TextBlock",
+                                                "wrap": true,
+                                                "text": "Automateで承認フローの作成方法"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "separator": true
+                            },
+                            {
+                                "type": "ColumnSet",
+                                "columns": [
+                                    {
+                                        "type": "Column",
+                                        "width": 30,
+                                        "items": [
+                                            {
+                                                "type": "TextBlock",
+                                                "text": "#13202",
+                                                "weight": "Bolder"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "Column",
+                                        "width": 70,
+                                        "items": [
+                                            {
+                                                "type": "TextBlock",
+                                                "wrap": true,
+                                                "text": "Automateで承認フローの作成方法"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "separator": true
+                            }
+                        ]
+                    },
+                    "title": "InProgress"
+                },
+                {
+                    "type": "Action.ShowCard",
+                    "title": "Closed",
+                    "card": {
+                        "type": "AdaptiveCard",
+                        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+                        "version": "1.2",
+                        "body": [
+                            {
+                                "type": "ColumnSet",
+                                "columns": [
+                                    {
+                                        "type": "Column",
+                                        "width": 30,
+                                        "items": [
+                                            {
+                                                "type": "TextBlock",
+                                                "text": "#11111",
+                                                "weight": "Bolder"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "Column",
+                                        "width": 70,
+                                        "items": [
+                                            {
+                                                "type": "TextBlock",
+                                                "wrap": true,
+                                                "text": "何かのタスク"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "separator": true
+                            },
+                            {
+                                "type": "ColumnSet",
+                                "columns": [
+                                    {
+                                        "type": "Column",
+                                        "width": 30,
+                                        "items": [
+                                            {
+                                                "type": "TextBlock",
+                                                "text": "#11111",
+                                                "weight": "Bolder"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "Column",
+                                        "width": 70,
+                                        "items": [
+                                            {
+                                                "type": "TextBlock",
+                                                "wrap": true,
+                                                "text": "何かのタスク"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "separator": true
+                            },
+                            {
+                                "type": "ColumnSet",
+                                "columns": [
+                                    {
+                                        "type": "Column",
+                                        "width": 30,
+                                        "items": [
+                                            {
+                                                "type": "TextBlock",
+                                                "text": "#11111",
+                                                "weight": "Bolder"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "Column",
+                                        "width": 70,
+                                        "items": [
+                                            {
+                                                "type": "TextBlock",
+                                                "wrap": true,
+                                                "text": "何かのタスク"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "separator": true
+                            },
+                            {
+                                "type": "ColumnSet",
+                                "columns": [
+                                    {
+                                        "type": "Column",
+                                        "width": 30,
+                                        "items": [
+                                            {
+                                                "type": "TextBlock",
+                                                "text": "#11111",
+                                                "weight": "Bolder"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "Column",
+                                        "width": 70,
+                                        "items": [
+                                            {
+                                                "type": "TextBlock",
+                                                "wrap": true,
+                                                "text": "何かのタスク"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "separator": true
+                            },
+                            {
+                                "type": "ColumnSet",
+                                "columns": [
+                                    {
+                                        "type": "Column",
+                                        "width": 30,
+                                        "items": [
+                                            {
+                                                "type": "TextBlock",
+                                                "text": "#11111",
+                                                "weight": "Bolder"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "Column",
+                                        "width": 70,
+                                        "items": [
+                                            {
+                                                "type": "TextBlock",
+                                                "wrap": true,
+                                                "text": "何かのタスク"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "separator": true
+                            }
+                        ]
+                    }
+                }
+            ],
+            "separator": true
+        }
+    ]
+}
