@@ -1,0 +1,139 @@
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.2",
+    "body": [
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "Bar Chart on Adaptive Card",
+                    "size": "Large"
+                }
+            ],
+            "style": "emphasis"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 30,
+                    "items": [
+                        {
+                            "type": "Container",
+                            "backgroundImage": {
+                                "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAA8CAMAAABLlIrqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEyUExURQAAAAC4/gBrlwBrmABrmQBsmABsmQBwnQBwnwBxoAB3qAB4qAB4qQB4qgB5qwB6qwB6rACAtQCBtwCBuACCuACDuQCFvACGvQCHvwCIwACKxACLxQCMxgCMxwCOyACOyQCPyQCPygCPywCQywCQzACRzQCSzQCSzgCSzwCTzgCTzwCT0ACT0QCU0ACU0QCU0gCV0gCW0wCW1ACX1QCX1gCY1QCY1gCY1wCZ1wCZ2ACa2ACa2QCb2gCb2wCc2wCc3ACd3ACd3QCe3QCe3gCe3wCf3wCf4ACg4ACg4QCg4gCh4gCj5QCk5QCk5gCk5wCl5gCl5wCl6ACm5wCm6ACm6QCn6gCo6wCp6wCp7ACp7QCq7ACq7QCq7gCr7gCr7wCy9wCy+ACz+QCz+gC0+gC2/QC3/tB4jUAAAAACdFJOUwDvRiYy0QAAAAlwSFlzAAAW6gAAFuoB5Y5DEAAAAmBJREFUOE91Sw1b0lAUPn6QmWPFWpE1aqQ5hUQKyswxG0TScHrz0ra4TTaS//8XOvduwiOM9/PcczZYitUlWH7YWF99uLq+mLCx9QCZW0jIrW1lEvLSmpTL56S1/L3Og7SZ35QkzEf3WgIem8hEsxaHLCw/yJIsZxkKckFd8GO1AE9UWZHnXVBkKCrqImXlKahKBp4pKjzHL+akKkWlCKpanJcgFJcAtreLQne+E7wsbaNKqacqwQuthNJST6VBScOceQrQdO3VjGVNS6SDXtWMlPuv9nfKb3Z1HVWFw4Py54R6vVI3dj69PqzolcMDKH/c+ZDw6F19r27UGrhBg3FmHFest8hde+9k78v+MW5qhgVW1WrUzCOkUbXenzVqDdwYlgmmYbYMs9lsmhavltHCzbGJB8tEtZqtpJJnkx+WYNnhFE7NTDpwdepksQtOr9vrOJ37+bPbgx45Ib3OXAYnBIhNbdLDbLvOZZu0L/n8g9pgk3Nq/8F0vO8XzsC5IDhfneMfv8k56VJK7Zuvfttr+98odZAQng2cAel63etOsrnuejYSGHVdF3+gAzrou8gB/eWEDgNCXc/1aR+JQ3AR9KnvEpeB57mhS7yg7wd8CEjQJzgyYMwnvs8IFw4i+AsPzE/sT4ObHzIBLMBMLZQ2BBHOwqIiNkoaopsRG91EwygUFbI4aQiDf8M4CKNwxHiNhmPxHMFtFEZxxGM4xopxEg18jEVEf2M841403MYx/hGPhSL+YNjjGCYsjqcSgdcJm8BEfJUqDV6QDAvAPyaTOFVKvuaHu/VMArCSiZWV/zSaHdQrCzBLAAAAAElFTkSuQmCC",
+                                "fillMode": "RepeatHorizontally"
+                            },
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Yamada",
+                                    "color": "Light",
+                                    "weight": "Bolder",
+                                    "size": "Large"
+                                }
+                            ]
+                        }
+                    ],
+                    "minHeight": "40px"
+                },
+                {
+                    "type": "Column",
+                    "width": 70,
+                    "spacing": "None"
+                }
+            ],
+            "spacing": "None"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 50,
+                    "items": [
+                        {
+                            "type": "Container",
+                            "backgroundImage": {
+                                "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAA8CAMAAABLlIrqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEyUExURQAAAAC4/gBrlwBrmABrmQBsmABsmQBwnQBwnwBxoAB3qAB4qAB4qQB4qgB5qwB6qwB6rACAtQCBtwCBuACCuACDuQCFvACGvQCHvwCIwACKxACLxQCMxgCMxwCOyACOyQCPyQCPygCPywCQywCQzACRzQCSzQCSzgCSzwCTzgCTzwCT0ACT0QCU0ACU0QCU0gCV0gCW0wCW1ACX1QCX1gCY1QCY1gCY1wCZ1wCZ2ACa2ACa2QCb2gCb2wCc2wCc3ACd3ACd3QCe3QCe3gCe3wCf3wCf4ACg4ACg4QCg4gCh4gCj5QCk5QCk5gCk5wCl5gCl5wCl6ACm5wCm6ACm6QCn6gCo6wCp6wCp7ACp7QCq7ACq7QCq7gCr7gCr7wCy9wCy+ACz+QCz+gC0+gC2/QC3/tB4jUAAAAACdFJOUwDvRiYy0QAAAAlwSFlzAAAW6gAAFuoB5Y5DEAAAAmBJREFUOE91Sw1b0lAUPn6QmWPFWpE1aqQ5hUQKyswxG0TScHrz0ra4TTaS//8XOvduwiOM9/PcczZYitUlWH7YWF99uLq+mLCx9QCZW0jIrW1lEvLSmpTL56S1/L3Og7SZ35QkzEf3WgIem8hEsxaHLCw/yJIsZxkKckFd8GO1AE9UWZHnXVBkKCrqImXlKahKBp4pKjzHL+akKkWlCKpanJcgFJcAtreLQne+E7wsbaNKqacqwQuthNJST6VBScOceQrQdO3VjGVNS6SDXtWMlPuv9nfKb3Z1HVWFw4Py54R6vVI3dj69PqzolcMDKH/c+ZDw6F19r27UGrhBg3FmHFest8hde+9k78v+MW5qhgVW1WrUzCOkUbXenzVqDdwYlgmmYbYMs9lsmhavltHCzbGJB8tEtZqtpJJnkx+WYNnhFE7NTDpwdepksQtOr9vrOJ37+bPbgx45Ib3OXAYnBIhNbdLDbLvOZZu0L/n8g9pgk3Nq/8F0vO8XzsC5IDhfneMfv8k56VJK7Zuvfttr+98odZAQng2cAel63etOsrnuejYSGHVdF3+gAzrou8gB/eWEDgNCXc/1aR+JQ3AR9KnvEpeB57mhS7yg7wd8CEjQJzgyYMwnvs8IFw4i+AsPzE/sT4ObHzIBLMBMLZQ2BBHOwqIiNkoaopsRG91EwygUFbI4aQiDf8M4CKNwxHiNhmPxHMFtFEZxxGM4xopxEg18jEVEf2M841403MYx/hGPhSL+YNjjGCYsjqcSgdcJm8BEfJUqDV6QDAvAPyaTOFVKvuaHu/VMArCSiZWV/zSaHdQrCzBLAAAAAElFTkSuQmCC",
+                                "fillMode": "RepeatHorizontally"
+                            },
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Tanaka",
+                                    "weight": "Bolder",
+                                    "color": "Light",
+                                    "size": "Large"
+                                }
+                            ]
+                        }
+                    ],
+                    "minHeight": "40px"
+                },
+                {
+                    "type": "Column",
+                    "width": 50,
+                    "spacing": "None"
+                }
+            ],
+            "spacing": "None"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 80,
+                    "items": [
+                        {
+                            "type": "Container",
+                            "backgroundImage": {
+                                "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAA8CAMAAABLlIrqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEyUExURQAAAAC4/gBrlwBrmABrmQBsmABsmQBwnQBwnwBxoAB3qAB4qAB4qQB4qgB5qwB6qwB6rACAtQCBtwCBuACCuACDuQCFvACGvQCHvwCIwACKxACLxQCMxgCMxwCOyACOyQCPyQCPygCPywCQywCQzACRzQCSzQCSzgCSzwCTzgCTzwCT0ACT0QCU0ACU0QCU0gCV0gCW0wCW1ACX1QCX1gCY1QCY1gCY1wCZ1wCZ2ACa2ACa2QCb2gCb2wCc2wCc3ACd3ACd3QCe3QCe3gCe3wCf3wCf4ACg4ACg4QCg4gCh4gCj5QCk5QCk5gCk5wCl5gCl5wCl6ACm5wCm6ACm6QCn6gCo6wCp6wCp7ACp7QCq7ACq7QCq7gCr7gCr7wCy9wCy+ACz+QCz+gC0+gC2/QC3/tB4jUAAAAACdFJOUwDvRiYy0QAAAAlwSFlzAAAW6gAAFuoB5Y5DEAAAAmBJREFUOE91Sw1b0lAUPn6QmWPFWpE1aqQ5hUQKyswxG0TScHrz0ra4TTaS//8XOvduwiOM9/PcczZYitUlWH7YWF99uLq+mLCx9QCZW0jIrW1lEvLSmpTL56S1/L3Og7SZ35QkzEf3WgIem8hEsxaHLCw/yJIsZxkKckFd8GO1AE9UWZHnXVBkKCrqImXlKahKBp4pKjzHL+akKkWlCKpanJcgFJcAtreLQne+E7wsbaNKqacqwQuthNJST6VBScOceQrQdO3VjGVNS6SDXtWMlPuv9nfKb3Z1HVWFw4Py54R6vVI3dj69PqzolcMDKH/c+ZDw6F19r27UGrhBg3FmHFest8hde+9k78v+MW5qhgVW1WrUzCOkUbXenzVqDdwYlgmmYbYMs9lsmhavltHCzbGJB8tEtZqtpJJnkx+WYNnhFE7NTDpwdepksQtOr9vrOJ37+bPbgx45Ib3OXAYnBIhNbdLDbLvOZZu0L/n8g9pgk3Nq/8F0vO8XzsC5IDhfneMfv8k56VJK7Zuvfttr+98odZAQng2cAel63etOsrnuejYSGHVdF3+gAzrou8gB/eWEDgNCXc/1aR+JQ3AR9KnvEpeB57mhS7yg7wd8CEjQJzgyYMwnvs8IFw4i+AsPzE/sT4ObHzIBLMBMLZQ2BBHOwqIiNkoaopsRG91EwygUFbI4aQiDf8M4CKNwxHiNhmPxHMFtFEZxxGM4xopxEg18jEVEf2M841403MYx/hGPhSL+YNjjGCYsjqcSgdcJm8BEfJUqDV6QDAvAPyaTOFVKvuaHu/VMArCSiZWV/zSaHdQrCzBLAAAAAElFTkSuQmCC",
+                                "fillMode": "RepeatHorizontally"
+                            },
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Sato",
+                                    "weight": "Bolder",
+                                    "color": "Light",
+                                    "size": "Large"
+                                }
+                            ]
+                        }
+                    ],
+                    "minHeight": "40px"
+                },
+                {
+                    "type": "Column",
+                    "width": 20,
+                    "spacing": "None"
+                }
+            ],
+            "spacing": "None"
+        },
+        {
+            "type": "ColumnSet",
+            "spacing": "None",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfAAAAAyCAMAAACUJXnfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABjUExURQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGZodN4AAAAgdFJOUwABAgUHJ0lKS0xSc3V2d4eKjY6PoKGi9Pf4+fr7/P3+tTtOYQAAAAlwSFlzAAAW6gAAFuoB5Y5DEAAAARhJREFUeF7t20FSwkAQQNGZQUFFMSiISCLc/5ROJ80l/P9tpjO7rp+iYEGR9K89hJwpiDvfl66f3ZB3FPu+80fOGEOUrqXdujHvKK6xdM4YYyzdluDnvKOI3aecMc4GZzE4jMFhDA5jcBiDwxgcxuAwBocxOIzBYQwOY3AYg8MYHMbgMAaHMTiMwWEMDmNwGIPDZPDVHHzFMgfPGSODv8QxHb5IjvFHhOsxnyAO0xJ8iEMUrbzP5w8Lcedl6VYe47isn0k28en2+5RPEOvLErzG4bd0AH+WwRgcxuAwBocxOIzBYQwOY3AYg8MYHMbgMAaHMTiMwWHuwcfulHcU331n2kteTlG6lbrrtnlH8dp3fssZY9uX3tU/9Pb/zWEfaRgAAAAASUVORK5CYII=",
+                            "spacing": "None",
+                            "horizontalAlignment": "Center",
+                            "size": "Stretch"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
