@@ -1,0 +1,77 @@
+{
+    "name": "承認を作成",
+    "inputs": {
+      "host": {
+        "apiId": "subscriptions/c6c6344b-0825-4478-a78d-c56f2e99ebe1/providers/Microsoft.Web/locations/westus/runtimes/unitedstates-002/apis/approvals",
+        "connectionReferenceName": "shared_approvals",
+        "operationId": "CreateAnApproval"
+      },
+      "parameters": {
+        "approvalType": "Basic",
+        "ApprovalCreationInput/title": "てすと",
+        "ApprovalCreationInput/assignedTo": "nagao@chonmage.onmicrosoft.com",
+        "ApprovalCreationInput/details": "aaa",
+        "ApprovalCreationInput/itemLink": "https://chonmage.sharepoint.com/:x:/s/Automate/EQgNGLussylIrcMB00APHmYBpLerXxc2lAMnbqK8PAEUog?e=KXvt30",
+        "ApprovalCreationInput/itemLinkDescription": "ドキュメント",
+        "ApprovalCreationInput/requestor": "nagao@chonmage.onmicrosoft.com",
+        "ApprovalCreationInput/enableNotifications": true,
+        "ApprovalCreationInput/enableReassignment": true,
+        "ApprovalCreationInput/attachments": [
+          {
+            "name": "book1.xlsx",
+            "content": {
+              "$content-type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+              "$content": ""
+            }
+          }
+        ]
+      }
+    },
+    "outputs": {
+      "statusCode": 201,
+      "headers": {
+        "Pragma": "no-cache",
+        "x-ms-request-id": "westus:1c95bdc3-2e71-42a3-8df0-2d2056629aa5",
+        "x-ms-correlation-request-id": "1c95bdc3-2e71-42a3-8df0-2d2056629aa5",
+        "x-ms-flow-mobile-ios-version": "1.3.0",
+        "x-ms-flow-routing-request-id": "WESTUS:20200912T090944Z:1c95bdc3-2e71-42a3-8df0-2d2056629aa5",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+        "X-Content-Type-Options": "nosniff",
+        "Timing-Allow-Origin": "*",
+        "x-ms-apihub-cached-response": "false",
+        "Cache-Control": "no-cache",
+        "Date": "Sat, 12 Sep 2020 09:09:43 GMT",
+        "Content-Length": "4095",
+        "Content-Type": "application/json; charset=utf-8",
+        "Expires": "-1"
+      },
+      "body": {
+        "approvers": [
+          {
+            "id": "e8c906f3-6502-422d-abfc-e1aaba7ecbeb",
+            "displayName": "Hiroaki Nagao",
+            "email": "nagao@chonmage.onmicrosoft.com",
+            "tenantId": "7b4df313-4bd9-4a7a-b474-2c7021d04e57",
+            "userPrincipalName": "nagao@chonmage.onmicrosoft.com"
+          }
+        ],
+        "respondLink": "https://flow.microsoft.com/manage/environments/Default-7b4df313-4bd9-4a7a-b474-2c7021d04e57/approvals/received/ff3d5ba7-02b1-41d5-87e0-4117ad445fd3?loginTenant=7b4df313-4bd9-4a7a-b474-2c7021d04e57",
+        "adaptiveCard": "{\"type\":\"AdaptiveCard\",\"version\":\"1.0\",\"body\":[{\"type\":\"Image\",\"url\":\"https://aka.ms/approvals-logo\",\"altText\":\"Power Automate approvals logo\"},{\"type\":\"TextBlock\",\"size\":\"large\",\"weight\":\"bolder\",\"text\":\"てすと\"},{\"type\":\"TextBlock\",\"text\":\"要求者: Hiroaki Nagao <nagao@chonmage.onmicrosoft.com>\",\"wrap\":true},{\"type\":\"FactSet\",\"facts\":[{\"title\":\"Date Created\",\"value\":\"Saturday, 12 September 2020 09:09 GMT\"},{\"title\":\"Link\",\"value\":\"[ドキュメント](https://chonmage.sharepoint.com/:x:/s/Automate/EQgNGLussylIrcMB00APHmYBpLerXxc2lAMnbqK8PAEUog?e=KXvt30)\"}]},{\"type\":\"TextBlock\",\"id\":\"ApprovalDetailsSection\",\"text\":\"aaa\",\"wrap\":true},{\"type\":\"ActionSet\",\"actions\":[{\"type\":\"Action.ShowCard\",\"card\":{\"type\":\"AdaptiveCard\",\"version\":\"1.0\",\"body\":[{\"type\":\"TextBlock\",\"text\":\"Comments\",\"wrap\":true},{\"type\":\"Input.Text\",\"id\":\"comments1\",\"placeholder\":\"Enter comments\",\"isMultiline\":true,\"maxLength\":2048}],\"actions\":[{\"type\":\"Action.Submit\",\"data\":{\"Environment\":\"Default-7b4df313-4bd9-4a7a-b474-2c7021d04e57\",\"ApprovalTitle\":\"てすと\",\"ApprovalLink\":\"https://flow.microsoft.com/manage/environments/Default-7b4df313-4bd9-4a7a-b474-2c7021d04e57/approvals/received/ff3d5ba7-02b1-41d5-87e0-4117ad445fd3?loginTenant=7b4df313-4bd9-4a7a-b474-2c7021d04e57\",\"ApprovalName\":\"ff3d5ba7-02b1-41d5-87e0-4117ad445fd3\",\"ItemLink\":\"https://chonmage.sharepoint.com/:x:/s/Automate/EQgNGLussylIrcMB00APHmYBpLerXxc2lAMnbqK8PAEUog?e=KXvt30\",\"ItemLinkDescription\":\"ドキュメント\",\"OnBehalfOfNotice\":\"要求者: Hiroaki Nagao <nagao@chonmage.onmicrosoft.com>\",\"CreatorName\":\"Hiroaki Nagao\",\"CreatorEmail\":\"nagao@chonmage.onmicrosoft.com\",\"CreationTime\":\"\\\"Saturday, 12 September 2020 09:09 GMT\\\"\",\"MessageTitle\":\"てすと\",\"Details\":\"aaa\",\"Options\":[\"Approve\",\"Reject\"],\"SelectedOption\":\"Approve\",\"ActionType\":1},\"title\":\"Submit\"}]},\"title\":\"Approve\"},{\"type\":\"Action.ShowCard\",\"card\":{\"type\":\"AdaptiveCard\",\"version\":\"1.0\",\"body\":[{\"type\":\"TextBlock\",\"text\":\"Comments\",\"wrap\":true},{\"type\":\"Input.Text\",\"id\":\"comments2\",\"placeholder\":\"Enter comments\",\"isMultiline\":true,\"maxLength\":2048}],\"actions\":[{\"type\":\"Action.Submit\",\"data\":{\"Environment\":\"Default-7b4df313-4bd9-4a7a-b474-2c7021d04e57\",\"ApprovalTitle\":\"てすと\",\"ApprovalLink\":\"https://flow.microsoft.com/manage/environments/Default-7b4df313-4bd9-4a7a-b474-2c7021d04e57/approvals/received/ff3d5ba7-02b1-41d5-87e0-4117ad445fd3?loginTenant=7b4df313-4bd9-4a7a-b474-2c7021d04e57\",\"ApprovalName\":\"ff3d5ba7-02b1-41d5-87e0-4117ad445fd3\",\"ItemLink\":\"https://chonmage.sharepoint.com/:x:/s/Automate/EQgNGLussylIrcMB00APHmYBpLerXxc2lAMnbqK8PAEUog?e=KXvt30\",\"ItemLinkDescription\":\"ドキュメント\",\"OnBehalfOfNotice\":\"要求者: Hiroaki Nagao <nagao@chonmage.onmicrosoft.com>\",\"CreatorName\":\"Hiroaki Nagao\",\"CreatorEmail\":\"nagao@chonmage.onmicrosoft.com\",\"CreationTime\":\"\\\"Saturday, 12 September 2020 09:09 GMT\\\"\",\"MessageTitle\":\"てすと\",\"Details\":\"aaa\",\"Options\":[\"Approve\",\"Reject\"],\"SelectedOption\":\"Reject\",\"ActionType\":1},\"title\":\"Submit\"}]},\"title\":\"Reject\"}]}]}",
+        "name": "ff3d5ba7-02b1-41d5-87e0-4117ad445fd3",
+        "title": "てすと",
+        "details": "aaa",
+        "itemLink": "https://chonmage.sharepoint.com/:x:/s/Automate/EQgNGLussylIrcMB00APHmYBpLerXxc2lAMnbqK8PAEUog?e=KXvt30",
+        "itemLinkDescription": "ドキュメント",
+        "requestDate": "2020-09-12T09:09:41Z"
+      }
+    },
+    "startTime": "2020-09-12T09:09:39.1556425Z",
+    "endTime": "2020-09-12T09:09:44.686943Z",
+    "trackingId": "ed8ba8de-3132-4624-a353-213bce639ea3",
+    "clientTrackingId": "08586017051075141546698999636CU120",
+    "clientKeywords": [
+      "testFlow"
+    ],
+    "code": "Created",
+    "status": "Succeeded"
+  }
