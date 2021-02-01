@@ -1,4 +1,3 @@
-let items = await loadItems()
 
 if (config.runsInWidget) {
     let widget = createWidget(items)
@@ -20,32 +19,35 @@ function createWidget(items) {
     let strDate = df.string(date)
     let w = new ListWidget()
     w.backgroundColor = new Color("#55c500")
-    w.centerAlignContent()
     let titleTxt = w.addText(item.title)
-    titleTxt.applyHeadlineTextStyling()
-    titleTxt.textColor = Color.white()
+    titleTxt.font=Font.boldSystemFont(16)
     let authorsTxt = w.addText("by " + authors)
-    authorsTxt.applyBodyTextStyling()
+    authorsTxt.font=Font.mediumSystemFont(12)
     authorsTxt.textColor = Color.white()
     authorsTxt.textOpacity = 0.8
     let dateTxt = w.addText(strDate)
-    dateTxt.applyBodyTextStyling()
+    dateTxt.font=Font.mediumSystemFont(12)
     dateTxt.textColor = Color.white()
     dateTxt.textOpacity = 0.8
-    let image = w.addImage(item["user"]["profile_image_url"])
-    image.leftAlignImage()
-    image.imageSize = new Size(150,150)
+    w.addImage(loadImage(item["user"]["profile_image_url"]))
+
     return w
 }
 
 async function loadItems() {
-    let url = "https://qiita.com/api/v2/items?page=1&per_page=1&query=qiita+tag%3APowerAutomate"
+    let url = "https://qiita.com/api/v2/items?page=1&per_page=1&query=qiita+tag%3A"+args.widgetParameter
     let req = new Request(url)
     let json = await req.loadJSON()
-    return json.items
+    return json
 }
 
-
+async function loadImage(imgurl){
+  let req = new Request(imgurl)
+  let img= await req.loadImage()
+  let img2 = new Image()
+  img2=img
+  return img2}
+  
 function decode(str) {
     let regex = /&#(\d+);/g
     return str.replace(regex, (match, dec) => {
