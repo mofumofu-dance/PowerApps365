@@ -3,15 +3,18 @@
   "ComponentIndexes": {},
   "ControlUniqueIds": {
     "App": 1,
+    "Button1": 4,
     "Screen1": 3
   },
-  "HeaderLastSavedDateTimeUTC": "03/03/2021 00:36:59",
+  "HeaderLastSavedDateTimeUTC": "03/03/2021 00:39:09",
   "LocalResourceRootPaths": {},
   "OrderComponentMetadata": {},
   "OrderComponentTemplate": {},
   "OrderDataSource": {},
   "OrderTemplate": {},
-  "OrderXMLTemplate": {},
+  "OrderXMLTemplate": {
+    "button": 0
+  },
   "PublishOrderIndexOffsets": {},
   "TemplateVersions": {},
   "VolatileProperties": {

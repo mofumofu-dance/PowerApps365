@@ -1,5 +1,20 @@
 [
   {
+    "Key": "button",
+    "Value": {
+      "CustomGroupControlTemplateName": "",
+      "FirstParty": true,
+      "Id": "http://microsoft.com/appmagic/button",
+      "IsComponentTemplate": false,
+      "IsCustomGroupControlTemplate": false,
+      "IsPremiumPcfControl": false,
+      "LastModifiedTimestamp": "0",
+      "Name": "button",
+      "OverridableProperties": {},
+      "Version": "2.0.0"
+    }
+  },
+  {
     "Key": "screen",
     "Value": {
       "CustomGroupControlTemplateName": "",
