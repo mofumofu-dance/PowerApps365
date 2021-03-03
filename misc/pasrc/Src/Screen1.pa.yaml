@@ -1,2 +1,10 @@
 Screen1 As screen:
 
+    Button1 As button:
+        Text: ="Button"
+        Fill: =RGBA(221, 79, 14, 1)
+        X: =40
+        Y: =40
+        ZIndex: =1
+        OnSelect: =Set(test,"Hello World")
+
