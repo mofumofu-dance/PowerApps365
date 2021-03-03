@@ -1,0 +1,64 @@
+{
+  "FormatVersion": "0.14",
+  "Header": {
+    "DocVersion": "1.301",
+    "MinVersionToLoad": "1.301",
+    "MSAppStructureVersion": "2.0"
+  },
+  "Properties": {
+    "AppCreationSource": "AppFromScratch",
+    "AppDescription": "",
+    "AppPreviewFlagsKey": [
+      "delayloadscreens",
+      "blockmovingcontrol",
+      "projectionmapping",
+      "usedisplaynamemetadata",
+      "usenonblockingonstartrule",
+      "enhancedgroupcontrol",
+      "useguiddatatypes",
+      "useexperimentalcdsconnector",
+      "useenforcesavedatalimits",
+      "componentauthoring",
+      "reliableconcurrent",
+      "dataTableV2Control",
+      "nativecdsexperimental",
+      "useexperimentalsqlconnector",
+      "enablecdsfileandlargeimage",
+      "formuladataprefetch",
+      "enhanceddelegation",
+      "aibuilderserviceenrollment"
+    ],
+    "Author": "",
+    "ContainsThirdPartyPcfControls": false,
+    "DefaultConnectedDataSourceMaxGetRowsCount": 500,
+    "DocumentAppType": "DesktopOrTablet",
+    "DocumentLayoutHeight": 768,
+    "DocumentLayoutLockOrientation": true,
+    "DocumentLayoutMaintainAspectRatio": true,
+    "DocumentLayoutOrientation": "landscape",
+    "DocumentLayoutScaleToFit": true,
+    "DocumentLayoutWidth": 1366,
+    "DocumentType": "App",
+    "EnableInstrumentation": false,
+    "ErrorCount": 0,
+    "FileID": "d559fdb8-5e6b-40ec-b44b-c379f8205d3d",
+    "Id": "fb2a8dab-3b41-4137-a860-23095cbfa22f",
+    "InstrumentationKey": "",
+    "Name": "Blank.msapp",
+    "OriginatingVersion": "1.301"
+  },
+  "PublishInfo": {
+    "AppName": "Blank",
+    "BackgroundColor": "RGBA(0,176,240,1)",
+    "IconColor": "RGBA(255,255,255,1)",
+    "IconName": "Edit",
+    "LogoFileName": "",
+    "PublishDataLocally": false,
+    "PublishResourcesLocally": false,
+    "PublishTarget": "player",
+    "UserLocale": "en-US"
+  },
+  "ScreenOrder": [
+    "Screen1"
+  ]
+}
