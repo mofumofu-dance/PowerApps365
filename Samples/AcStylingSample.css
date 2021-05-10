@@ -1,0 +1,717 @@
+ .ac-input-container.inline-action-input {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap!important
+}
+
+ .ac-media {
+    position: relative
+}
+
+ .ac-media.hide-content {
+    visibility: hidden
+}
+
+ .media-fallback-text {
+    visibility: visible!important;
+    position: absolute;
+    top: 0;
+    color: #c4314b
+}
+
+ .card-border {
+    border: .2rem solid #f5f5f5;
+    border-radius: .3rem
+}
+
+ .ac-numberInput, .ac-textInput {
+    margin-left: 1.6rem;
+    margin-right: 1.6rem;
+    width: calc(100% - 2 * 1.6rem);
+    padding: .6rem 1.2rem .7rem;
+    border: none;
+    background-color: #ffffff;
+    margin: 0
+}
+
+ .ac-numberInput:focus, .ac-textInput:focus {
+    border-bottom: solid .2rem #6264a7;
+    padding-bottom: .5rem
+}
+
+ .ac-numberInput::-webkit-input-placeholder, .ac-textInput::-webkit-input-placeholder {
+    color: #8a8a8a
+}
+
+ .ac-numberInput:-ms-input-placeholder, .ac-textInput:-ms-input-placeholder {
+    color: #8a8a8a
+}
+
+ .ac-numberInput::-ms-input-placeholder, .ac-textInput::-ms-input-placeholder {
+    color: #8a8a8a
+}
+
+ .ac-numberInput::placeholder, .ac-textInput::placeholder {
+    color: #8a8a8a
+}
+
+ .ac-numberInput:focus, .ac-numberInput:hover, .ac-textInput:focus, .ac-textInput:hover {
+    outline: 0
+}
+
+ .ac-numberInput.inline-textInput, .ac-textInput.inline-textInput {
+    width: auto
+}
+
+ .ac-numberInput:not(.inline-textInput), .ac-textInput:not(.inline-textInput) {
+    width: 100%
+}
+
+ .ac-numberInput:not(.ac-multiline), .ac-textInput:not(.ac-multiline) {
+    margin: 0
+}
+
+ .ac-textInput.ac-multiline {
+    margin: 0
+}
+
+ .ac-textInput.ac-multiline::-webkit-input-placeholder {
+    color: #424242
+}
+
+ .ac-textInput.ac-multiline:-ms-input-placeholder {
+    color: #424242
+}
+
+ .ac-textInput.ac-multiline::-ms-input-placeholder {
+    color: #424242
+}
+
+ .ac-textInput.ac-multiline::placeholder {
+    color: #424242
+}
+
+ .ac-textInput.ac-multiline.inline-textInput {
+    width: auto
+}
+
+ .ac-numberInput::-webkit-inner-spin-button {
+    -webkit-appearance: none
+}
+
+ .password-input-reveal {
+    display: inline-flex;
+    flex: 1 1 auto;
+    min-width: auto!important
+}
+
+ .password-input-reveal input::-ms-reveal {
+    display: none
+}
+
+ .password-input-reveal .inline-textInput {
+    width: 100%
+}
+
+ .ac-pushButton {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border: .1rem solid transparent;
+    height: 2.2rem;
+    padding: 0 2rem;
+    width: auto;
+    max-width: calc(100% - 2 * .4rem);
+    margin: .4rem;
+    margin: 0;
+    max-width: 100%
+}
+
+ .ac-pushButton:not([disabled]):not(.ts-btn-primary) {
+    font-weight: 600;
+    position: relative;
+    border-color: #bbbcdd;
+    color: #6264a7;
+    background-color: #fff
+}
+
+ .ac-pushButton:not([disabled]):not(.ts-btn-primary)::before {
+    content: '';
+    position: absolute;
+    top: .1rem;
+    left: .1rem;
+    bottom: .1rem;
+    right: .1rem;
+    border: .1rem solid transparent;
+    border-radius: .2rem
+}
+
+ .ac-pushButton:not([disabled]):not(.ts-btn-primary):hover {
+    background-color: #e9eaf6;
+    border-color: #a5a7cf;
+    color: #3d3e66
+}
+
+ .ac-pushButton:not([disabled]):not(.ts-btn-primary):active, .ac-pushButton:not([disabled]):not(.ts-btn-primary):focus, .ac-pushButton:not([disabled]):not(.ts-btn-primary):target {
+    border-color: #a5a7cf;
+    background-color: #bbbcdd;
+    color: #3d3e66
+}
+
+ .ac-pushButton:not([disabled]):not(.ts-btn-primary)[selected] {
+    border-color: #a5a7cf;
+    background-color: #bbbcdd;
+    color: #3d3e66
+}
+
+body.acc-keyboard-mode  .ac-pushButton:not([disabled]):not(.ts-btn-primary):focus {
+    border-color: #323348
+}
+
+body.acc-keyboard-mode  .ac-pushButton:not([disabled]):not(.ts-btn-primary):focus::before {
+    border-color: #fff
+}
+
+ .ac-pushButton[disabled] {
+    position: relative
+}
+
+ .ac-pushButton .ts-card-spinner {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 0
+}
+
+ .ac-pushButton .ts-card-spinner :last-child svg {
+    margin-right: 0
+}
+
+ .ac-pushButton .ts-card-spinner :first-child svg {
+    margin-left: 0
+}
+
+ .ac-pushButton .ts-card-spinner busy-animation {
+    margin-left: 0;
+    padding: .2rem 0
+}
+
+ .ac-pushButton .ts-card-spinner svg path {
+    fill: #c8c6c4
+}
+
+ .ac-inlineActionButton {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border: .1rem solid transparent;
+    height: 3.2rem;
+    padding: 0 2rem;
+    width: auto;
+    max-width: calc(100% - 2 * .4rem);
+    margin: .4rem;
+    margin: 0;
+    max-width: 100%
+}
+
+ .ac-inlineActionButton:not([disabled]):not(.ts-btn-primary) {
+    font-weight: 600;
+    position: relative;
+    border-color: #bbbcdd;
+    color: #6264a7;
+    background-color: #fff
+}
+
+ .ac-inlineActionButton:not([disabled]):not(.ts-btn-primary)::before {
+    content: '';
+    position: absolute;
+    top: .1rem;
+    left: .1rem;
+    bottom: .1rem;
+    right: .1rem;
+    border: .1rem solid transparent;
+    border-radius: .2rem
+}
+
+ .ac-inlineActionButton:not([disabled]):not(.ts-btn-primary):hover {
+    background-color: #e9eaf6;
+    border-color: #a5a7cf;
+    color: #3d3e66
+}
+
+ .ac-inlineActionButton:not([disabled]):not(.ts-btn-primary):active, .ac-inlineActionButton:not([disabled]):not(.ts-btn-primary):focus, .ac-inlineActionButton:not([disabled]):not(.ts-btn-primary):target {
+    border-color: #a5a7cf;
+    background-color: #bbbcdd;
+    color: #3d3e66
+}
+
+ .ac-inlineActionButton:not([disabled]):not(.ts-btn-primary)[selected] {
+    border-color: #a5a7cf;
+    background-color: #bbbcdd;
+    color: #3d3e66
+}
+
+body.acc-keyboard-mode  .ac-inlineActionButton:not([disabled]):not(.ts-btn-primary):focus {
+    border-color: #323348
+}
+
+body.acc-keyboard-mode  .ac-inlineActionButton:not([disabled]):not(.ts-btn-primary):focus::before {
+    border-color: #fff
+}
+
+ .ac-inlineActionButton[disabled] {
+    position: relative
+}
+
+ .ac-inlineActionButton .ts-card-spinner {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 0
+}
+
+ .ac-inlineActionButton .ts-card-spinner :last-child svg {
+    margin-right: 0
+}
+
+ .ac-inlineActionButton .ts-card-spinner :first-child svg {
+    margin-left: 0
+}
+
+ .ac-inlineActionButton .ts-card-spinner busy-animation {
+    margin-left: 0;
+    padding: .2rem 0
+}
+
+ .ac-inlineActionButton .ts-card-spinner svg path {
+    fill: #c8c6c4
+}
+
+ .ac-inlineActionButton.iconOnly {
+    padding: 3px
+}
+
+ .ac-selectable {
+    cursor: pointer
+}
+
+body.acc-keyboard-mode  .ac-container[tabindex]:focus,body.acc-keyboard-mode  .ac-selectable:focus {
+    outline: .2rem solid #6264a7
+}
+
+ .choice-container {
+    display: flex;
+    flex-direction: column
+}
+
+ .choice-container .icons-checkbox-selected, .choice-container .icons-checkbox-unselected {
+    float: left;
+    margin-left: -.4rem
+}
+
+ .choice-container .icons-checkbox-selected:not(.wrap), .choice-container .icons-checkbox-unselected:not(.wrap) {
+    margin-top: -.6rem
+}
+
+ .choice-container .icons-radiobox-selected, .choice-container .icons-radiobox-unselected {
+    float: left;
+    margin-top: .4rem;
+    margin-left: .6rem;
+    margin-right: 1rem
+}
+
+ .choice-container .icons-item-selected .icons-default-fill {
+    fill: #6264a7
+}
+
+ .choice-container .choice-label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 400;
+    height: 2.7rem
+}
+
+body.acc-keyboard-mode  .choice-container .choice-label:focus {
+    outline: 2px solid #6264a7
+}
+
+ .choice-container .choice-label .check-item {
+    opacity: 0;
+    position: absolute;
+    -moz-appearance: groupbox;
+    -ms-progress-appearance: none;
+    -webkit-appearance: none
+}
+
+ .choice-container .choice-label .check-item::-ms-check {
+    display: none
+}
+
+ .choice-container .choice-label .check-item~.icons-item-unselected {
+    display: inline
+}
+
+ .choice-container .choice-label .check-item~.icons-item-selected {
+    display: none
+}
+
+ .choice-container .choice-label .check-item:checked~.icons-item-unselected {
+    display: none
+}
+
+ .choice-container .choice-label .check-item:checked~.icons-item-selected {
+    display: inline
+}
+
+ .choice-container .choice-label .check-item[type=radio]~.icon {
+    height: 1.2rem;
+    width: 1.2rem
+}
+
+ .choice-container .choice-label .check-item[type=radio]~.icon .app-svg {
+    height: 1.2rem;
+    width: 1.2rem
+}
+
+ .choice-container .choice-label .check-item[type=radio]~.icon .app-svg.wrap {
+    margin-top: 0
+}
+
+ .choice-container .choice-label {
+    margin-bottom: 0;
+    height: 2rem
+}
+
+ .choice-container .choice-label+.choice-label {
+    margin-top: 1.2rem
+}
+
+.o365-multichoice-dropdown.dropdown-menu {
+    display: block!important;
+    width: auto;
+    padding: 1rem 0;
+    top: -.1rem;
+    border: solid 1px rgba(32,31,31,.15);
+    position: absolute
+}
+
+.o365-multichoice-dropdown.dropdown-menu .dropdown-item-container {
+    max-height: 20rem
+}
+
+.o365-multichoice-dropdown.dropdown-menu .dropdown-item-container .tse-scrollbar {
+    max-height: 20rem;
+    padding-bottom: .2rem
+}
+
+.o365-multichoice-dropdown.dropdown-menu .dropdown-list {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+.o365-multichoice-dropdown.dropdown-menu .dropdown-list>li.item {
+    height: 3.4rem
+}
+
+.o365-multichoice-dropdown.dropdown-menu .dropdown-list>li.item:focus,.o365-multichoice-dropdown.dropdown-menu .dropdown-list>li.item:hover {
+    background: #f0f0f0
+}
+
+.o365-multichoice-dropdown.dropdown-menu .dropdown-list>li.item:focus>a,.o365-multichoice-dropdown.dropdown-menu .dropdown-list>li.item:hover>a {
+    color: #252423!important
+}
+
+.o365-multichoice-dropdown.dropdown-menu .dropdown-list>li>a {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: flex;
+    padding: .3rem 1rem;
+    clear: both;
+    font-size: 1.4rem;
+    line-height: 3.2rem;
+    color: #424242;
+    white-space: nowrap;
+    max-width: calc(100% - 1rem)
+}
+
+.o365-multichoice-dropdown.dropdown-menu .dropdown-list>li>a:focus,.o365-multichoice-dropdown.dropdown-menu .dropdown-list>li>a:hover {
+    text-decoration: none
+}
+
+.o365-multichoice-dropdown.dropdown-menu .tse-scrollbar {
+    bottom: 0;
+    top: 0
+}
+
+.o365-multichoice-dropdown.dropdown-menu .dropdown-list>li>span.content {
+    display: flex;
+    padding: .3rem 1rem
+}
+
+ .o365-multichoice-selector {
+    margin: 0
+}
+
+ .o365-multichoice-selector .o365-text-input {
+    width: calc(100% - 3.2rem);
+    text-align: left
+}
+
+ .o365-multichoice-selector .o365-close-button, .o365-multichoice-selector .o365-dropdown-button, .o365-multichoice-selector .o365-text-input {
+    background-color: #f0f0f0
+}
+
+ .o365-multichoice-selector .o365-close-button {
+    padding: 0;
+    border-radius: 0 .3rem .3rem 0;
+    border: none;
+    width: 3.2rem
+}
+
+ .o365-multichoice-selector .o365-close-button:focus {
+    border-bottom: solid .2rem #6264a7
+}
+
+ .card-app-attribution {
+    width: 100%;
+    margin-bottom: 0
+}
+
+ .power-bar-card-copy {
+    float: right;
+    padding-top: 1.2rem;
+    padding-right: 1rem
+}
+
+ .action-feedback {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-top: .2rem solid #f5f5f5;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    height: 32px
+}
+
+ .action-feedback .error-text {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    flex: auto;
+    padding: .5rem;
+    overflow: hidden;
+    -ms-grid-row-align: center;
+    align-self: center
+}
+
+ .action-feedback .close-button {
+    height: inherit
+}
+
+ .action-feedback.info {
+    background-color: #ebebeb;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    color: #424242
+}
+
+ .action-feedback.error {
+    background-color: #fcf4f6;
+    border: 1px solid #f3d6d8;
+    box-sizing: border-box;
+    color: #c4314b
+}
+
+ .action-feedback.error .error-icon {
+    height: inherit
+}
+
+ .action-feedback.error .error-icon path {
+    fill: #fcf4f6;
+    stroke: #c4314b
+}
+
+ .action-feedback.error .app-icons-fill-hover .icons-default-fill {
+    fill: #c4314b
+}
+
+ .o365-action-pane-multichoice-input {
+    width: 100%
+}
+
+ .ac-persona-container {
+    display: flex;
+    flex-wrap: nowrap;
+    min-width: 2rem;
+    min-height: 2rem
+}
+
+ .ac-persona-profile-picture-container {
+    flex: 0 0 2rem;
+    height: 2rem;
+    overflow: hidden;
+    border-radius: 50%
+}
+
+.acc-keyboard-mode  .ac-persona-profile-picture-container:focus-within {
+    outline: 1px solid #000
+}
+
+ .ac-persona-display-name-container {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-left: .6rem
+}
+
+ .ac-user-picture {
+    min-width: 100%;
+    min-height: 100%;
+    vertical-align: top
+}
+
+ .ac-persona-set-container {
+    display: flex;
+    flex-wrap: wrap
+}
+
+ .ac-persona-set-container .ac-persona-container:not(:first-child) {
+    margin-left: .6rem
+}
+
+ .ac-persona-set-container .ac-persona-set-more-personas-container {
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    margin-left: .6rem
+}
+
+.acc-keyboard-mode  .ac-persona-set-container .ac-persona-set-more-personas-container:focus-within {
+    outline: 1px solid #000
+}
+
+ .ac-persona-set-container .ac-persona-set-more-personas {
+    border-radius: 50%;
+    background: #d1d1d1;
+    color: #242424;
+    text-align: center;
+    cursor: pointer
+}
+
+.adaptive-card-fullwidth {
+    width: 100%
+}
+
+.card-enlarge-image-icon-wrapper {
+    position: relative;
+    display: inline-block
+}
+
+.card-enlarge-image-icon-wrapper a.card-image-expand {
+    display: none;
+    position: absolute;
+    height: 3.2rem;
+    background: rgba(37,36,35,.48)
+}
+
+.card-enlarge-image-icon-wrapper a.card-image-expand .icons-default-fill {
+    fill: #fff
+}
+
+.card-enlarge-image-icon-wrapper:hover a.card-image-expand,body.acc-keyboard-mode .acc-message-nav .card-enlarge-image-icon-wrapper a.card-image-expand {
+    display: inline
+}
+
+.card-enlarge-image-icon-wrapper a.card-image-expand {
+    top: 0;
+    right: 0
+}
+
+.thread-body:not(.carded-message)  img {
+    position: static
+}
+
+.ac-overlay.ngdialog-overlay {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.card-refresh {
+    position: absolute;
+    right: 0
+}
+
+body.acc-keyboard-mode .card-refresh:focus {
+    outline: .2rem solid #6264a7
+}
+
+.adaptive-card-responsive:not(.adaptive-card-fullwidth) {
+    width: 45.2rem;
+    word-wrap: normal
+}
+
+@media (max-width: 1102px) {
+    .adaptive-card-responsive:not(.adaptive-card-fullwidth) {
+        width:29.8rem;
+        word-wrap: normal
+    }
+}
+
+@media (min-width: 822px) and (max-width:946px) {
+    .adaptive-card-responsive:not(.adaptive-card-fullwidth) {
+        width:45.2rem;
+        word-wrap: normal
+    }
+}
+
+@media (min-width: 668px) and (max-width:822px) {
+    .adaptive-card-responsive:not(.adaptive-card-fullwidth) {
+        width:29.8rem;
+        word-wrap: normal
+    }
+}
+
+.chat-style .adaptive-card-responsive.adaptive-card-fullwidth {
+    width: 60.6rem;
+    max-width: 100%
+}
+
+@media (max-width: 1102px) {
+    .chat-style .adaptive-card-responsive.adaptive-card-fullwidth {
+        width:45.2rem;
+        max-width: 100%
+    }
+}
+
+@media (min-width: 822px) and (max-width:946px) {
+    .chat-style .adaptive-card-responsive.adaptive-card-fullwidth {
+        width:60.6rem;
+        max-width: 100%
+    }
+}
+
+@media (min-width: 668px) and (max-width:822px) {
+    .chat-style .adaptive-card-responsive.adaptive-card-fullwidth {
+        width:45.2rem;
+        max-width: 100%
+    }
+}
+
+.thread-right-rail .ts-message-thread-body  {
+    width: 100%
+}
+
+.thread-right-rail .ts-message-thread-body .adaptive-card-fullwidth {
+    width: 100%
+}
