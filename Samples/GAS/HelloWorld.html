@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+    <title>Automate LIFF</title>
+    <meta charset="UTF-8">
+    <style>
+        div {font-size:5.3em;}
+    </style>
+</head>
+
+<body>
+    <div>Hello <span id="name">world</span>.</div>
+</body>
+<script>
+    // LIFFの初期化を行う
+    liff.init({
+        // 自分のLIFF ID（URLから『https://liff.line.me/』を除いた文字列）を入力する
+        liffId: "xxxxxxx"
+
+    }).then(() => {
+        //ここから初期化後の処理を書いていく
+        // ログインユーザーのLINEアカウントのプロフィールを取得
+        liff.getProfile().then(
+            function(profile) {
+            // ログインユーザーのプロフィール名
+            const name = profile.displayName
+
+            // HTMLのworld部分を名前で書き換え
+            document.querySelector("#name").innerText = name
+        })
+    });
+    //ボタンを押したときの処理などを書く
+</script>
+</html>
