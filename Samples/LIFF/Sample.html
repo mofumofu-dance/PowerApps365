@@ -1,0 +1,73 @@
+<html>
+<head>
+    <script type="text/javascript" src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+    <title>Automate LIFF</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <link rel="stylesheet" href="CSSファイルのパス" />
+    <script src="https://unpkg.com/adaptivecards/dist/adaptivecards.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        // LIFFの初期化を行う
+        liff.init({
+            // 自分のLIFF ID
+            liffId: "LIFF ID"
+
+        }).then(() => {
+            //ここから初期化後の処理を書いていく
+            // ログインユーザーのLINEアカウントのプロフィールを取得
+            liff.getProfile().then(
+                function (profile) {
+                    // ログインユーザーのプロフィール名
+                    const name = profile.displayName
+
+                    // HTMLのworld部分を名前で書き換え
+                    document.querySelector("#name").innerText = name
+                })
+        });
+      //Adaptive Cardの描画処理
+        var card ="カードのJSON";
+        // Create an AdaptiveCard instance
+        var adaptiveCard = new AdaptiveCards.AdaptiveCard();
+        // Host Config defines the style and behavior of a card
+        adaptiveCard.hostConfig = new AdaptiveCards.HostConfig("HostConfigのJSON");
+        // Set the adaptive card's event handlers. 
+        adaptiveCard.onExecuteAction = function (action) {
+            console.info(action);
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (this.readyState != 4) return;
+                if (this.status == 200) {
+                    var data = JSON.parse(this.responseText);
+                    // Parse the card payload
+                    adaptiveCard.parse(data);
+                    // Render the card to an HTML element:
+                    var renderedCard = adaptiveCard.render();
+                    // And finally insert it somewhere in your page:
+                    const ss = document.getElementsByTagName("div")[0];
+                    document.body.removeChild(ss);
+                    document.body.appendChild(renderedCard);
+                }
+            };
+
+            liff.getProfile().then(
+                function (profile) {
+                    xhr.open("POST", "フローのURL", true);
+                    xhr.setRequestHeader('Content-Type', 'application/json');
+                    xhr.send(JSON.stringify({
+                        user: profile,
+                        value: action.data
+                    }));
+                })
+        }
+        // Parse the card payload
+        adaptiveCard.parse(card);
+        // Render the card to an HTML element
+        var renderedCard = adaptiveCard.render();
+        // And finally insert it in the page
+        document.body.appendChild(renderedCard);
+    </script>
+</body>
+
+</html>
