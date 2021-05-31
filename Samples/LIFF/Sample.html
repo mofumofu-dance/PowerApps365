@@ -32,6 +32,13 @@
         var adaptiveCard = new AdaptiveCards.AdaptiveCard();
         // Host Config defines the style and behavior of a card
         adaptiveCard.hostConfig = new AdaptiveCards.HostConfig("HostConfigのJSON");
+        // Parse the card payload
+        adaptiveCard.parse(card);
+        // Render the card to an HTML element
+        var renderedCard = adaptiveCard.render();
+        // And finally insert it in the page
+        document.body.appendChild(renderedCard);
+        
         // Set the adaptive card's event handlers. 
         adaptiveCard.onExecuteAction = function (action) {
             console.info(action);
@@ -44,29 +51,23 @@
                     adaptiveCard.parse(data);
                     // Render the card to an HTML element:
                     var renderedCard = adaptiveCard.render();
-                    // And finally insert it somewhere in your page:
+                    // And finally append it somewhere in your page:
                     const ss = document.getElementsByTagName("div")[0];
                     document.body.removeChild(ss);
                     document.body.appendChild(renderedCard);
                 }
             };
-
             liff.getProfile().then(
                 function (profile) {
                     xhr.open("POST", "フローのURL", true);
                     xhr.setRequestHeader('Content-Type', 'application/json');
+                    //Send LINE login user profile & Adaptive Card input
                     xhr.send(JSON.stringify({
                         user: profile,
                         value: action.data
                     }));
                 })
         }
-        // Parse the card payload
-        adaptiveCard.parse(card);
-        // Render the card to an HTML element
-        var renderedCard = adaptiveCard.render();
-        // And finally insert it in the page
-        document.body.appendChild(renderedCard);
     </script>
 </body>
 
