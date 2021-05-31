@@ -1,0 +1,2 @@
+- AC_style.css : LIFFでAdaptive Cardを表示する場合のスタイルファイル
+- AC_config.json : LIFFでAdaptive Cardを表示する場合のHostConfigを納めたJSON
