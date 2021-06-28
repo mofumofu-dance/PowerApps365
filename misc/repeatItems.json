@@ -1,0 +1,25 @@
+      {
+        "elmType": "div",
+        "style": {
+          "justify-content": "left",
+          "width": "100%",
+          "float": "left",
+          "display": "flex",
+          "flex-direction": "row",
+          "margin-top": "10px",
+          "margin-left": "40px"
+        },
+        "children": [
+          {
+            "forEach": "choiceIterator in [$Tag]",
+            "elmType": "div",
+            "txtContent": "[$choiceIterator.lookupValue]",
+            "style": {
+              "margin-right": "10px",
+              "background-color": "#3c3c3c",
+              "color": "#fff",
+              "padding": "7px"
+            }
+          }
+        ]
+      }
