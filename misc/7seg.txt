@@ -1,0 +1,35 @@
+With({'7seg_txt':"M 6 3 L 8 1 L 26 1 L 28 3 L 26 5 L 8 5 Z
+M 29 4 L 31 6 L 31 21 L 29 23 L 27 21 L 27 6 Z
+M 29 25 L 31 27 L 31 42 L 29 44 L 27 42 L 27 27 Z
+M 8 47 L 6 45 L 8 43 L 26 43 L 28 45 L 26 47 Z
+M 5 25 L 7 27 L 7 42 L 5 44 L 3 42 L 3 27 Z
+M 5 4 L 7 6 L 7 21 L 5 23 L 3 21 L 3 6 Z
+M 6 24 L 8 22 L 26 22 L 28 24 L 26 26 L 8 26 Z
+",special_txt:"M 3 3 L 7 3 L 7 7 L 3 7 Z
+M 3 45 L 3 41 L 7 41 L 7 45 Z"},With(If(inputChar in [":","."],
+    {segTable:AddColumns([1,2],"seg",Last(FirstN(Split(special_txt,Char(10)),Value)).Result),
+    numerics:Table(
+        {char:":",bit:"11"},
+        {char:".",bit:"01"}
+)},
+    {segTable:AddColumns(Sequence(7,1),"seg",Last(FirstN(Split('7seg_txt',Char(10)),Value)).Result),
+    numerics:Table(
+        {char:"0",bit:"1111110"},
+        {char:"1",bit:"0110000"},
+        {char:"2",bit:"1101101"},
+        {char:"3",bit:"1111001"},
+        {char:"4",bit:"0110011"},
+        {char:"5",bit:"1011011"},
+        {char:"6",bit:"1011111"},
+        {char:"7",bit:"1110000"},
+        {char:"8",bit:"1111111"},
+        {char:"9",bit:"1111011"},
+        {char:"-",bit:"0000001"}
+)}),
+    With({darkseg:Filter(segTable,Mid(LookUp(numerics,char=inputChar).bit,Value,1)="0"),glowseg:Filter(segTable,Mid(LookUp(numerics,char=inputChar).bit,Value,1)="1")},
+    "data:image/svg+xml,"& 
+EncodeUrl(
+"<svg viewBox='0 -1 "&If(inputChar in [":","."],10,36)&" 50' xmlns='http://www.w3.org/2000/svg'>
+<path d='"&Concat(darkseg,seg," ")&"' fill='"&darkcolor&"'/>
+<path d='"&Concat(glowseg,seg," ")&"' fill='"&glowcolor&"'/>
+</svg>"))))
