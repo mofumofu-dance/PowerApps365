@@ -1,0 +1,1229 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "The Color API",
+    "description": "Pass in any valid color and get conversion into any other format, the name of the color, placeholder images and a multitude of schemes.",
+    "version": "1.0"
+  },
+  "host": "thecolorapi.com",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "consumes": [],
+  "produces": [],
+  "paths": {
+    "/scheme": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "mode": {
+                  "type": "string",
+                  "description": "mode"
+                },
+                "count": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "count"
+                },
+                "colors": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "hex": {
+                        "type": "object",
+                        "properties": {
+                          "value": {
+                            "type": "string",
+                            "description": "value"
+                          },
+                          "clean": {
+                            "type": "string",
+                            "description": "clean"
+                          }
+                        },
+                        "description": "hex"
+                      },
+                      "rgb": {
+                        "type": "object",
+                        "properties": {
+                          "fraction": {
+                            "type": "object",
+                            "properties": {
+                              "r": {
+                                "type": "number",
+                                "format": "float",
+                                "description": "r"
+                              },
+                              "g": {
+                                "type": "number",
+                                "format": "float",
+                                "description": "g"
+                              },
+                              "b": {
+                                "type": "number",
+                                "format": "float",
+                                "description": "b"
+                              }
+                            },
+                            "description": "fraction"
+                          },
+                          "r": {
+                            "type": "integer",
+                            "format": "int32",
+                            "description": "r"
+                          },
+                          "g": {
+                            "type": "integer",
+                            "format": "int32",
+                            "description": "g"
+                          },
+                          "b": {
+                            "type": "integer",
+                            "format": "int32",
+                            "description": "b"
+                          },
+                          "value": {
+                            "type": "string",
+                            "description": "value"
+                          }
+                        },
+                        "description": "rgb"
+                      },
+                      "hsl": {
+                        "type": "object",
+                        "properties": {
+                          "fraction": {
+                            "type": "object",
+                            "properties": {
+                              "h": {
+                                "type": "number",
+                                "format": "float",
+                                "description": "h"
+                              },
+                              "s": {
+                                "type": "number",
+                                "format": "float",
+                                "description": "s"
+                              },
+                              "l": {
+                                "type": "number",
+                                "format": "float",
+                                "description": "l"
+                              }
+                            },
+                            "description": "fraction"
+                          },
+                          "h": {
+                            "type": "integer",
+                            "format": "int32",
+                            "description": "h"
+                          },
+                          "s": {
+                            "type": "integer",
+                            "format": "int32",
+                            "description": "s"
+                          },
+                          "l": {
+                            "type": "integer",
+                            "format": "int32",
+                            "description": "l"
+                          },
+                          "value": {
+                            "type": "string",
+                            "description": "value"
+                          }
+                        },
+                        "description": "hsl"
+                      },
+                      "hsv": {
+                        "type": "object",
+                        "properties": {
+                          "fraction": {
+                            "type": "object",
+                            "properties": {
+                              "h": {
+                                "type": "number",
+                                "format": "float",
+                                "description": "h"
+                              },
+                              "s": {
+                                "type": "number",
+                                "format": "float",
+                                "description": "s"
+                              },
+                              "v": {
+                                "type": "number",
+                                "format": "float",
+                                "description": "v"
+                              }
+                            },
+                            "description": "fraction"
+                          },
+                          "value": {
+                            "type": "string",
+                            "description": "value"
+                          },
+                          "h": {
+                            "type": "integer",
+                            "format": "int32",
+                            "description": "h"
+                          },
+                          "s": {
+                            "type": "integer",
+                            "format": "int32",
+                            "description": "s"
+                          },
+                          "v": {
+                            "type": "integer",
+                            "format": "int32",
+                            "description": "v"
+                          }
+                        },
+                        "description": "hsv"
+                      },
+                      "name": {
+                        "type": "object",
+                        "properties": {
+                          "value": {
+                            "type": "string",
+                            "description": "value"
+                          },
+                          "closest_named_hex": {
+                            "type": "string",
+                            "description": "closest_named_hex"
+                          },
+                          "exact_match_name": {
+                            "type": "boolean",
+                            "description": "exact_match_name"
+                          },
+                          "distance": {
+                            "type": "integer",
+                            "format": "int32",
+                            "description": "distance"
+                          }
+                        },
+                        "description": "name"
+                      },
+                      "cmyk": {
+                        "type": "object",
+                        "properties": {
+                          "fraction": {
+                            "type": "object",
+                            "properties": {
+                              "c": {
+                                "type": "number",
+                                "format": "float",
+                                "description": "c"
+                              },
+                              "m": {
+                                "type": "number",
+                                "format": "float",
+                                "description": "m"
+                              },
+                              "y": {
+                                "type": "number",
+                                "format": "float",
+                                "description": "y"
+                              },
+                              "k": {
+                                "type": "number",
+                                "format": "float",
+                                "description": "k"
+                              }
+                            },
+                            "description": "fraction"
+                          },
+                          "value": {
+                            "type": "string",
+                            "description": "value"
+                          },
+                          "c": {
+                            "type": "integer",
+                            "format": "int32",
+                            "description": "c"
+                          },
+                          "m": {
+                            "type": "integer",
+                            "format": "int32",
+                            "description": "m"
+                          },
+                          "y": {
+                            "type": "integer",
+                            "format": "int32",
+                            "description": "y"
+                          },
+                          "k": {
+                            "type": "integer",
+                            "format": "int32",
+                            "description": "k"
+                          }
+                        },
+                        "description": "cmyk"
+                      },
+                      "XYZ": {
+                        "type": "object",
+                        "properties": {
+                          "fraction": {
+                            "type": "object",
+                            "properties": {
+                              "X": {
+                                "type": "number",
+                                "format": "float",
+                                "description": "X"
+                              },
+                              "Y": {
+                                "type": "number",
+                                "format": "float",
+                                "description": "Y"
+                              },
+                              "Z": {
+                                "type": "number",
+                                "format": "float",
+                                "description": "Z"
+                              }
+                            },
+                            "description": "fraction"
+                          },
+                          "value": {
+                            "type": "string",
+                            "description": "value"
+                          },
+                          "X": {
+                            "type": "integer",
+                            "format": "int32",
+                            "description": "X"
+                          },
+                          "Y": {
+                            "type": "integer",
+                            "format": "int32",
+                            "description": "Y"
+                          },
+                          "Z": {
+                            "type": "integer",
+                            "format": "int32",
+                            "description": "Z"
+                          }
+                        },
+                        "description": "XYZ"
+                      },
+                      "image": {
+                        "type": "object",
+                        "properties": {
+                          "bare": {
+                            "type": "string",
+                            "description": "bare"
+                          },
+                          "named": {
+                            "type": "string",
+                            "description": "named"
+                          }
+                        },
+                        "description": "image"
+                      },
+                      "contrast": {
+                        "type": "object",
+                        "properties": {
+                          "value": {
+                            "type": "string",
+                            "description": "value"
+                          }
+                        },
+                        "description": "contrast"
+                      },
+                      "_links": {
+                        "type": "object",
+                        "properties": {
+                          "self": {
+                            "type": "object",
+                            "properties": {
+                              "href": {
+                                "type": "string",
+                                "description": "href"
+                              }
+                            },
+                            "description": "self"
+                          }
+                        },
+                        "description": "_links"
+                      },
+                      "_embedded": {
+                        "type": "object",
+                        "properties": {},
+                        "description": "_embedded"
+                      }
+                    }
+                  },
+                  "description": "colors"
+                },
+                "seed": {
+                  "type": "object",
+                  "properties": {
+                    "hex": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string",
+                          "description": "value"
+                        },
+                        "clean": {
+                          "type": "string",
+                          "description": "clean"
+                        }
+                      },
+                      "description": "hex"
+                    },
+                    "rgb": {
+                      "type": "object",
+                      "properties": {
+                        "fraction": {
+                          "type": "object",
+                          "properties": {
+                            "r": {
+                              "type": "number",
+                              "format": "float",
+                              "description": "r"
+                            },
+                            "g": {
+                              "type": "number",
+                              "format": "float",
+                              "description": "g"
+                            },
+                            "b": {
+                              "type": "number",
+                              "format": "float",
+                              "description": "b"
+                            }
+                          },
+                          "description": "fraction"
+                        },
+                        "r": {
+                          "type": "integer",
+                          "format": "int32",
+                          "description": "r"
+                        },
+                        "g": {
+                          "type": "integer",
+                          "format": "int32",
+                          "description": "g"
+                        },
+                        "b": {
+                          "type": "integer",
+                          "format": "int32",
+                          "description": "b"
+                        },
+                        "value": {
+                          "type": "string",
+                          "description": "value"
+                        }
+                      },
+                      "description": "rgb"
+                    },
+                    "hsl": {
+                      "type": "object",
+                      "properties": {
+                        "fraction": {
+                          "type": "object",
+                          "properties": {
+                            "h": {
+                              "type": "number",
+                              "format": "float",
+                              "description": "h"
+                            },
+                            "s": {
+                              "type": "number",
+                              "format": "float",
+                              "description": "s"
+                            },
+                            "l": {
+                              "type": "number",
+                              "format": "float",
+                              "description": "l"
+                            }
+                          },
+                          "description": "fraction"
+                        },
+                        "h": {
+                          "type": "integer",
+                          "format": "int32",
+                          "description": "h"
+                        },
+                        "s": {
+                          "type": "integer",
+                          "format": "int32",
+                          "description": "s"
+                        },
+                        "l": {
+                          "type": "integer",
+                          "format": "int32",
+                          "description": "l"
+                        },
+                        "value": {
+                          "type": "string",
+                          "description": "value"
+                        }
+                      },
+                      "description": "hsl"
+                    },
+                    "hsv": {
+                      "type": "object",
+                      "properties": {
+                        "fraction": {
+                          "type": "object",
+                          "properties": {
+                            "h": {
+                              "type": "number",
+                              "format": "float",
+                              "description": "h"
+                            },
+                            "s": {
+                              "type": "number",
+                              "format": "float",
+                              "description": "s"
+                            },
+                            "v": {
+                              "type": "number",
+                              "format": "float",
+                              "description": "v"
+                            }
+                          },
+                          "description": "fraction"
+                        },
+                        "value": {
+                          "type": "string",
+                          "description": "value"
+                        },
+                        "h": {
+                          "type": "integer",
+                          "format": "int32",
+                          "description": "h"
+                        },
+                        "s": {
+                          "type": "integer",
+                          "format": "int32",
+                          "description": "s"
+                        },
+                        "v": {
+                          "type": "integer",
+                          "format": "int32",
+                          "description": "v"
+                        }
+                      },
+                      "description": "hsv"
+                    },
+                    "name": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string",
+                          "description": "value"
+                        },
+                        "closest_named_hex": {
+                          "type": "string",
+                          "description": "closest_named_hex"
+                        },
+                        "exact_match_name": {
+                          "type": "boolean",
+                          "description": "exact_match_name"
+                        },
+                        "distance": {
+                          "type": "integer",
+                          "format": "int32",
+                          "description": "distance"
+                        }
+                      },
+                      "description": "name"
+                    },
+                    "cmyk": {
+                      "type": "object",
+                      "properties": {
+                        "fraction": {
+                          "type": "object",
+                          "properties": {
+                            "c": {
+                              "type": "number",
+                              "format": "float",
+                              "description": "c"
+                            },
+                            "m": {
+                              "type": "number",
+                              "format": "float",
+                              "description": "m"
+                            },
+                            "y": {
+                              "type": "number",
+                              "format": "float",
+                              "description": "y"
+                            },
+                            "k": {
+                              "type": "number",
+                              "format": "float",
+                              "description": "k"
+                            }
+                          },
+                          "description": "fraction"
+                        },
+                        "value": {
+                          "type": "string",
+                          "description": "value"
+                        },
+                        "c": {
+                          "type": "integer",
+                          "format": "int32",
+                          "description": "c"
+                        },
+                        "m": {
+                          "type": "integer",
+                          "format": "int32",
+                          "description": "m"
+                        },
+                        "y": {
+                          "type": "integer",
+                          "format": "int32",
+                          "description": "y"
+                        },
+                        "k": {
+                          "type": "integer",
+                          "format": "int32",
+                          "description": "k"
+                        }
+                      },
+                      "description": "cmyk"
+                    },
+                    "XYZ": {
+                      "type": "object",
+                      "properties": {
+                        "fraction": {
+                          "type": "object",
+                          "properties": {
+                            "X": {
+                              "type": "number",
+                              "format": "float",
+                              "description": "X"
+                            },
+                            "Y": {
+                              "type": "number",
+                              "format": "float",
+                              "description": "Y"
+                            },
+                            "Z": {
+                              "type": "number",
+                              "format": "float",
+                              "description": "Z"
+                            }
+                          },
+                          "description": "fraction"
+                        },
+                        "value": {
+                          "type": "string",
+                          "description": "value"
+                        },
+                        "X": {
+                          "type": "integer",
+                          "format": "int32",
+                          "description": "X"
+                        },
+                        "Y": {
+                          "type": "integer",
+                          "format": "int32",
+                          "description": "Y"
+                        },
+                        "Z": {
+                          "type": "integer",
+                          "format": "int32",
+                          "description": "Z"
+                        }
+                      },
+                      "description": "XYZ"
+                    },
+                    "image": {
+                      "type": "object",
+                      "properties": {
+                        "bare": {
+                          "type": "string",
+                          "description": "bare"
+                        },
+                        "named": {
+                          "type": "string",
+                          "description": "named"
+                        }
+                      },
+                      "description": "image"
+                    },
+                    "contrast": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string",
+                          "description": "value"
+                        }
+                      },
+                      "description": "contrast"
+                    },
+                    "_links": {
+                      "type": "object",
+                      "properties": {
+                        "self": {
+                          "type": "object",
+                          "properties": {
+                            "href": {
+                              "type": "string",
+                              "description": "href"
+                            }
+                          },
+                          "description": "self"
+                        }
+                      },
+                      "description": "_links"
+                    },
+                    "_embedded": {
+                      "type": "object",
+                      "properties": {},
+                      "description": "_embedded"
+                    }
+                  },
+                  "description": "seed"
+                },
+                "image": {
+                  "type": "object",
+                  "properties": {
+                    "bare": {
+                      "type": "string",
+                      "description": "bare"
+                    },
+                    "named": {
+                      "type": "string",
+                      "description": "named"
+                    }
+                  },
+                  "description": "image"
+                },
+                "_links": {
+                  "type": "object",
+                  "properties": {
+                    "self": {
+                      "type": "string",
+                      "description": "self"
+                    },
+                    "schemes": {
+                      "type": "object",
+                      "properties": {
+                        "monochrome": {
+                          "type": "string",
+                          "description": "monochrome"
+                        },
+                        "monochrome-dark": {
+                          "type": "string",
+                          "description": "monochrome-dark"
+                        },
+                        "monochrome-light": {
+                          "type": "string",
+                          "description": "monochrome-light"
+                        },
+                        "analogic": {
+                          "type": "string",
+                          "description": "analogic"
+                        },
+                        "complement": {
+                          "type": "string",
+                          "description": "complement"
+                        },
+                        "analogic-complement": {
+                          "type": "string",
+                          "description": "analogic-complement"
+                        },
+                        "triad": {
+                          "type": "string",
+                          "description": "triad"
+                        },
+                        "quad": {
+                          "type": "string",
+                          "description": "quad"
+                        }
+                      },
+                      "description": "schemes"
+                    }
+                  },
+                  "description": "_links"
+                },
+                "_embedded": {
+                  "type": "object",
+                  "properties": {},
+                  "description": "_embedded"
+                }
+              }
+            },
+            "headers": {
+              "Content-Type": {
+                "description": "Content-Type",
+                "type": "string"
+              }
+            }
+          }
+        },
+        "summary": "Generate Color Schema",
+        "operationId": "GenerateSchema",
+        "description": "Return a generated scheme for the provided seed color and optional mode.",
+        "parameters": [
+          {
+            "name": "rgb",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "description": "Valid rgb color. Example: 0,71,171"
+          },
+          {
+            "name": "hex",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "description": "Valid hex code w/o #. Example: 0047AB"
+          },
+          {
+            "name": "format",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "default": "json",
+            "x-ms-visibility": "internal"
+          },
+          {
+            "name": "mode",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "monochrome",
+              "monochrome-dark",
+              "monochrome-light",
+              "analogic",
+              "complement",
+              "analogic-complement",
+              "triad",
+              "quad"
+            ],
+            "description": "Define mode by which to generate the scheme from the seed color. Default: monochrome"
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "description": "Number of colors to return. Default: 5"
+          },
+          {
+            "name": "named",
+            "in": "query",
+            "required": true,
+            "type": "boolean",
+            "default": true,
+            "x-ms-visibility": "internal"
+          }
+        ]
+      }
+    },
+    "/id": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "hex": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "string",
+                      "description": "value"
+                    },
+                    "clean": {
+                      "type": "string",
+                      "description": "clean"
+                    }
+                  },
+                  "description": "hex"
+                },
+                "rgb": {
+                  "type": "object",
+                  "properties": {
+                    "fraction": {
+                      "type": "object",
+                      "properties": {
+                        "r": {
+                          "type": "number",
+                          "format": "float",
+                          "description": "r"
+                        },
+                        "g": {
+                          "type": "number",
+                          "format": "float",
+                          "description": "g"
+                        },
+                        "b": {
+                          "type": "number",
+                          "format": "float",
+                          "description": "b"
+                        }
+                      },
+                      "description": "fraction"
+                    },
+                    "r": {
+                      "type": "integer",
+                      "format": "int32",
+                      "description": "r"
+                    },
+                    "g": {
+                      "type": "integer",
+                      "format": "int32",
+                      "description": "g"
+                    },
+                    "b": {
+                      "type": "integer",
+                      "format": "int32",
+                      "description": "b",
+                      "title": ""
+                    },
+                    "value": {
+                      "type": "string",
+                      "description": "value"
+                    }
+                  },
+                  "description": "rgb"
+                },
+                "hsl": {
+                  "type": "object",
+                  "properties": {
+                    "fraction": {
+                      "type": "object",
+                      "properties": {
+                        "h": {
+                          "type": "number",
+                          "format": "float",
+                          "description": "h"
+                        },
+                        "s": {
+                          "type": "number",
+                          "format": "float",
+                          "description": "s"
+                        },
+                        "l": {
+                          "type": "number",
+                          "format": "float",
+                          "description": "l"
+                        }
+                      },
+                      "description": "fraction"
+                    },
+                    "h": {
+                      "type": "integer",
+                      "format": "int32",
+                      "description": "h"
+                    },
+                    "s": {
+                      "type": "integer",
+                      "format": "int32",
+                      "description": "s"
+                    },
+                    "l": {
+                      "type": "integer",
+                      "format": "int32",
+                      "description": "l"
+                    },
+                    "value": {
+                      "type": "string",
+                      "description": "value"
+                    }
+                  },
+                  "description": "hsl"
+                },
+                "hsv": {
+                  "type": "object",
+                  "properties": {
+                    "fraction": {
+                      "type": "object",
+                      "properties": {
+                        "h": {
+                          "type": "number",
+                          "format": "float",
+                          "description": "h"
+                        },
+                        "s": {
+                          "type": "number",
+                          "format": "float",
+                          "description": "s"
+                        },
+                        "v": {
+                          "type": "number",
+                          "format": "float",
+                          "description": "v"
+                        }
+                      },
+                      "description": "fraction"
+                    },
+                    "value": {
+                      "type": "string",
+                      "description": "value"
+                    },
+                    "h": {
+                      "type": "integer",
+                      "format": "int32",
+                      "description": "h"
+                    },
+                    "s": {
+                      "type": "integer",
+                      "format": "int32",
+                      "description": "s"
+                    },
+                    "v": {
+                      "type": "integer",
+                      "format": "int32",
+                      "description": "v"
+                    }
+                  },
+                  "description": "hsv"
+                },
+                "name": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "string",
+                      "description": "value"
+                    },
+                    "closest_named_hex": {
+                      "type": "string",
+                      "description": "closest_named_hex"
+                    },
+                    "exact_match_name": {
+                      "type": "boolean",
+                      "description": "exact_match_name"
+                    },
+                    "distance": {
+                      "type": "integer",
+                      "format": "int32",
+                      "description": "distance"
+                    }
+                  },
+                  "description": "name"
+                },
+                "cmyk": {
+                  "type": "object",
+                  "properties": {
+                    "fraction": {
+                      "type": "object",
+                      "properties": {
+                        "c": {
+                          "type": "number",
+                          "format": "float",
+                          "description": "c"
+                        },
+                        "m": {
+                          "type": "number",
+                          "format": "float",
+                          "description": "m"
+                        },
+                        "y": {
+                          "type": "number",
+                          "format": "float",
+                          "description": "y"
+                        },
+                        "k": {
+                          "type": "number",
+                          "format": "float",
+                          "description": "k"
+                        }
+                      },
+                      "description": "fraction"
+                    },
+                    "value": {
+                      "type": "string",
+                      "description": "value"
+                    },
+                    "c": {
+                      "type": "integer",
+                      "format": "int32",
+                      "description": "c"
+                    },
+                    "m": {
+                      "type": "integer",
+                      "format": "int32",
+                      "description": "m"
+                    },
+                    "y": {
+                      "type": "integer",
+                      "format": "int32",
+                      "description": "y"
+                    },
+                    "k": {
+                      "type": "integer",
+                      "format": "int32",
+                      "description": "k"
+                    }
+                  },
+                  "description": "cmyk"
+                },
+                "XYZ": {
+                  "type": "object",
+                  "properties": {
+                    "fraction": {
+                      "type": "object",
+                      "properties": {
+                        "X": {
+                          "type": "number",
+                          "format": "float",
+                          "description": "X"
+                        },
+                        "Y": {
+                          "type": "number",
+                          "format": "float",
+                          "description": "Y"
+                        },
+                        "Z": {
+                          "type": "number",
+                          "format": "float",
+                          "description": "Z"
+                        }
+                      },
+                      "description": "fraction"
+                    },
+                    "value": {
+                      "type": "string",
+                      "description": "value"
+                    },
+                    "X": {
+                      "type": "integer",
+                      "format": "int32",
+                      "description": "X"
+                    },
+                    "Y": {
+                      "type": "integer",
+                      "format": "int32",
+                      "description": "Y"
+                    },
+                    "Z": {
+                      "type": "integer",
+                      "format": "int32",
+                      "description": "Z"
+                    }
+                  },
+                  "description": "XYZ"
+                },
+                "image": {
+                  "type": "object",
+                  "properties": {
+                    "bare": {
+                      "type": "string",
+                      "description": "bare"
+                    },
+                    "named": {
+                      "type": "string",
+                      "description": "named"
+                    }
+                  },
+                  "description": "image"
+                },
+                "contrast": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "string",
+                      "description": "value"
+                    }
+                  },
+                  "description": "contrast"
+                },
+                "_links": {
+                  "type": "object",
+                  "properties": {
+                    "self": {
+                      "type": "object",
+                      "properties": {
+                        "href": {
+                          "type": "string",
+                          "description": "href"
+                        }
+                      },
+                      "description": "self"
+                    }
+                  },
+                  "description": "_links"
+                },
+                "_embedded": {
+                  "type": "object",
+                  "properties": {},
+                  "description": "_embedded"
+                }
+              }
+            },
+            "headers": {
+              "Content-Type": {
+                "description": "Content-Type",
+                "type": "string"
+              }
+            }
+          }
+        },
+        "summary": "Color Identification",
+        "operationId": "ColorIdentification",
+        "parameters": [
+          {
+            "name": "hex",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "description": "Valid hex code w/o #. Example 0047AB"
+          },
+          {
+            "name": "rgb",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "description": "Valid rgb color, separated by comma. Example: 0,71,171"
+          },
+          {
+            "name": "hsl",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "description": "Valid hsl color. S and L are in %. Example: 215,100%,34%"
+          },
+          {
+            "name": "cmyk",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "description": "Valid cmyk color. Example: 100,58,0,33"
+          },
+          {
+            "name": "format",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "default": "json",
+            "x-ms-visibility": "internal"
+          },
+          {
+            "name": "named",
+            "in": "query",
+            "required": true,
+            "type": "boolean",
+            "default": true,
+            "x-ms-visibility": "internal"
+          }
+        ],
+        "description": "Get information for a single color."
+      }
+    }
+  },
+  "definitions": {},
+  "parameters": {},
+  "responses": {},
+  "securityDefinitions": {},
+  "security": [],
+  "tags": []
+}
