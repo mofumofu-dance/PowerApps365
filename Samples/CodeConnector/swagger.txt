@@ -1,0 +1,29 @@
+swagger: '2.0'
+info: {title: CodeConnector, description: Code Connector, version: '1.0'}
+host: google.com
+basePath: /
+schemes: [https]
+consumes: []
+produces: []
+paths:
+  /:
+    post:
+      responses:
+        default:
+          description: default
+          schema: {}
+      summary: Calculate Sum and Average
+      operationId: calcSumAve
+      parameters:
+      - name: body
+        in: body
+        required: true
+        schema:
+          type: array
+          items: {type: number, format: float}
+definitions: {}
+parameters: {}
+responses: {}
+securityDefinitions: {}
+security: []
+tags: []
