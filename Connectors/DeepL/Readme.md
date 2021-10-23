@@ -21,7 +21,7 @@ API key is provided in your account page. Set API Key as *DeepL-Auth-Key {yourAu
 * Select "Import an OpenAPI from URL", and input raw url for [Free](https://raw.githubusercontent.com/mofumofu-dance/PowerApps365/master/Connectors/DeepL/apiDefinition.free.json) or [Premium](https://raw.githubusercontent.com/mofumofu-dance/PowerApps365/master/Connectors/DeepL/apiDefinition.json).
 * After import connector, set background color and icon.
 
-<img src="./media/create_connector.png" alt="apikey" width="300px"/>
+<img src="./media/create_connector.png" alt="apikey" width="500px"/>
 
 # Supported Operations
 
