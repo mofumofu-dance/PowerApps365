@@ -1,0 +1,274 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "v1",
+        "title": "DeepL Translation",
+        "description": "The DeepL translate APIs provide quality translation"
+    },
+    "host": "api.deepl.com",
+    "schemes": [
+        "https"
+    ],
+    "paths": {
+        "/v2/translate": {
+            "post": {
+                "tags": [],
+                "summary": "Translate text",
+                "description": "The translate function allows to translate texts.",
+                "operationId": "translate",
+                "consumes": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "translations": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "detected_source_language": {
+                                                "type": "string"
+                                            },
+                                            "text": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": [
+                                            "detected_source_language",
+                                            "text"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "target_lang",
+                        "in": "formData",
+                        "type": "string",
+                        "required": true,
+                        "x-ms-dynamic-values": {
+                            "operationId": "languages",
+                            "value-path": "language",
+                            "value-title": "name"
+                        }
+                    },
+                    {
+                        "name": "source_lang",
+                        "in": "formData",
+                        "type": "string",
+                        "required": false,
+                        "x-ms-dynamic-values": {
+                            "operationId": "languages",
+                            "value-path": "language",
+                            "value-title": "name"
+                        }
+                    },
+                    {
+                        "name": "text",
+                        "in": "formData",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "security": [
+                    {
+                        "Apikey": []
+                    }
+                ]
+            }
+        },
+        "/v2/document": {
+            "post": {
+                "tags": [],
+                "summary": "Upload document to translate",
+                "description": "The document function allows you to translate whole documents.",
+                "operationId": "document",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "document_id": {
+                                    "type": "string"
+                                },
+                                "document_key": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "target_lang",
+                        "in": "formData",
+                        "type": "string",
+                        "required": true,
+                        "x-ms-dynamic-values": {
+                            "operationId": "languages",
+                            "value-path": "language",
+                            "value-title": "name"
+                        }
+                    },
+                    {
+                        "name": "source_lang",
+                        "in": "formData",
+                        "type": "string",
+                        "required": false,
+                        "x-ms-dynamic-values": {
+                            "operationId": "languages",
+                            "value-path": "language",
+                            "value-title": "name"
+                        }
+                    },
+                    {
+                        "description": "The document file to be translated.",
+                        "in": "formData",
+                        "name": "file",
+                        "required": true,
+                        "type": "file",
+                        "x-ms-summary": "The document file to be translated."
+                    }
+                ],
+                "security": [
+                    {
+                        "Apikey": []
+                    }
+                ]
+            }
+        },
+        "/v2/document/{documentId}": {
+            "post": {
+                "tags": [],
+                "summary": "Check document translation status",
+                "description": "The status of the document translation process can be checked by sending a status request.",
+                "operationId": "checkStatus",
+                "consumes": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "document_id": {
+                                    "type": "string"
+                                },
+                                "status": {
+                                    "type": "string"
+                                },
+                                "seconds_remaining": {
+                                    "type": "integer"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "documentId",
+                        "in": "path",
+                        "required": true,
+                        "type": "string",
+                        "x-ms-summary": "Document ID",
+                        "description": "The document Id to check status."
+                    },
+                    {
+                        "name": "document_key",
+                        "in": "formData",
+                        "type": "string",
+                        "required": true,
+                        "x-ms-summary": "Document Key"
+                    }
+                ],
+                "security": [
+                    {
+                        "Apikey": []
+                    }
+                ]
+            }
+        },
+        "/v2/document/{documentId}/result": {
+            "post": {
+                "tags": [],
+                "summary": "Get document translation result",
+                "description": "Once the status of the document translation process is 'done', the result can be downloaded from the document specific ID.",
+                "operationId": "downloadResult",
+                "consumes": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "format": "binary",
+                            "type": "string"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "documentId",
+                        "in": "path",
+                        "required": true,
+                        "type": "string",
+                        "x-ms-summary": "Document ID",
+                        "description": "The document Id to check status."
+                    },
+                    {
+                        "name": "document_key",
+                        "in": "formData",
+                        "type": "string",
+                        "required": true,
+                        "x-ms-summary": "Document Key"
+                    }
+                ],
+                "security": [
+                    {
+                        "Apikey": []
+                    }
+                ]
+            }
+        },
+        "/v2/languages": {
+            "post": {
+                "tags": [],
+                "summary": "List supported languages",
+                "description": "This allows you to list all supported languages of the API.",
+                "operationId": "languages",
+                "consumes": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "security": [
+                    {
+                        "Apikey": []
+                    }
+                ]
+            }
+        }
+    },
+    "securityDefinitions": {
+        "Apikey": {
+            "type": "apiKey",
+            "in": "header",
+            "name": "Authorization"
+        }
+    }
+}
