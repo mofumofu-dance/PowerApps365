@@ -6,7 +6,7 @@ DeepL API provides the world’s best machine translation technology directly in
 
 You need to sign up DeepL developer account. You can [register](https://www.deepl.com/pro-api?cta=header-pro/) for free upto 500,000 character limit/month or premium (consumption) account.
 
-If you have free DeepL account, use [apiDefinition.swagger.json](./apiDefinition.swagger.json), for premium account use [apiDefinition.json](./apiDefinition.json).
+If you have free DeepL account, use [apiDefinition.free.json](./apiDefinition.free.json), for premium account use [apiDefinition.json](./apiDefinition.json).
 
 # Authentication
 
