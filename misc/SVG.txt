@@ -1,0 +1,8 @@
+"data:image/svg+xml,"& EncodeUrl("<svg viewBox='"&-Self.Width/2+95&" "&-Self.Height/2+198/2&" "&Self.Width&" "&Self.Height&" "&"'  xmlns='http://www.w3.org/2000/svg' filter='url(#f1)'>
+<defs>
+<filter id='f1' x='0' y='0'>
+ <feGaussianBlur in='SourceGraphics' stdDeviation='"&Slider1.Value/100&"'/>
+ </filter>
+ </defs>
+ <polygon points='100,10 40,198 190,78 10,78 160,198' stroke.width='"&Slider1.Value/100&"' stroke='orange' fill='#FFB900' />
+</svg>")
