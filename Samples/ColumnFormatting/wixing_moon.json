@@ -1,0 +1,73 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+  "elmType": "div",
+  "style": {
+    "display": "flex",
+    "flex-direction": "column",
+    "width": "120px",
+    "height": "140px"
+  },
+  "children": [
+    {
+      "elmType": "div",
+      "style": {
+        "position": "relative",
+        "margin": "2px",
+        "width": "120px",
+        "height": "120px"
+      },
+      "children": [
+        {
+          "elmType": "svg",
+          "style": {
+            "fill": "#555555",
+            "position": "absolute",
+            "top": "0",
+            "right": "0"
+          },
+          "attributes": {
+            "viewBox": "-12 -12 24 24"
+          },
+          "children": [
+            {
+              "elmType": "path",
+              "attributes": {
+                "d": "M 0 -10.5 C 5.79894 -10.5 10.5 -5.79894 10.5 0 C 10.5 5.79894 5.79894 10.5 0 10.5 C -5.79894 10.5 -10.5 5.79894 -10.5 0 C -10.5 -5.79894 -5.79894 -10.5 0 -10.5 Z"
+              }
+            }
+          ]
+        },
+        {
+          "elmType": "svg",
+          "style": {
+            "fill": "#FFFF00",
+            "position": "absolute",
+            "top": "0",
+            "right": "0"
+          },
+          "attributes": {
+            "viewBox": "-12 -12 24 24"
+          },
+          "children": [
+            {
+              "elmType": "path",
+              "attributes": {
+                "d": "='M 0 -10 C 5.5228 -10 10 -5.5228 10 0 C 10 5.5228 5.5228 10 0 10 C ' + (5.5228-2*5.5228*(@currentField)) + ' 10 ' + (10-20*(@currentField)) + ' 5.5228 ' + (10-20*(@currentField)) + ' 0 C ' + (10-20*(@currentField)) + ' -5.5228 '+ (5.5228-2*5.5228*(@currentField)) + ' -10 0 -10 Z'"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "elmType": "div",
+      "txtContent": "=if(@currentField.displayValue=='', '0%' , (100*(@currentField)+'%'))",
+      "style": {
+        "position": "relative",
+        "margin":"2px",
+        "font-size": "14px",
+        "font-weight": "bold"
+      }
+    }
+  ]
+}
