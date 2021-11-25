@@ -1,0 +1,1303 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+  "elmType": "div",
+  "debugMode": true,
+  "style": {
+    "display": "flex",
+    "flex-direction": "column"
+  },
+  "children": [
+    {
+      "elmType": "div",
+      "style": {
+        "border": "1px solid black"
+      },
+      "children": [
+        {
+          "elmType": "div",
+          "style": {
+            "display": "flex"
+          },
+          "children": [
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),1)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),1)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "start": "=addDays(Date('11/01/2021'),1)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),2)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),2)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "start": "=addDays(Date('11/01/2021'),2)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),3)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),3)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "start": "=addDays(Date('11/01/2021'),3)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),4)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),4)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "start": "=addDays(Date('11/01/2021'),4)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),5)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),5)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "start": "=addDays(Date('11/01/2021'),5)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),6)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),6)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "start": "=addDays(Date('11/01/2021'),6)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),7)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),7)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "start": "=addDays(Date('11/01/2021'),7)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),8)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),8)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "start": "=addDays(Date('11/01/2021'),8)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),9)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),9)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "start": "=addDays(Date('11/01/2021'),9)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),10)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),10)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "start": "=addDays(Date('11/01/2021'),10)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),11)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),11)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "start": "=addDays(Date('11/01/2021'),11)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),12)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),12)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "start": "=addDays(Date('11/01/2021'),12)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),13)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),13)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "start": "=addDays(Date('11/01/2021'),13)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),14)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),14)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "start": "=addDays(Date('11/01/2021'),14)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),15)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),15)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "start": "=addDays(Date('11/01/2021'),15)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),16)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),16)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "start": "=addDays(Date('11/01/2021'),16)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),17)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),17)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "start": "=addDays(Date('11/01/2021'),17)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),18)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),18)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "start": "=addDays(Date('11/01/2021'),18)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),19)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),19)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "start": "=addDays(Date('11/01/2021'),19)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),20)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),20)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "start": "=addDays(Date('11/01/2021'),20)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),21)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),21)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "start": "=addDays(Date('11/01/2021'),21)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),22)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),22)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "start": "=addDays(Date('11/01/2021'),22)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),23)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),23)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "start": "=addDays(Date('11/01/2021'),23)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),24)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),24)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "start": "=addDays(Date('11/01/2021'),24)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),25)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),25)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "start": "=addDays(Date('11/01/2021'),25)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),26)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),26)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "start": "=addDays(Date('11/01/2021'),26)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),27)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),27)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "start": "=addDays(Date('11/01/2021'),27)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),28)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),28)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "start": "=addDays(Date('11/01/2021'),28)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),29)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),29)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "start": "=addDays(Date('11/01/2021'),29)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),30)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),30)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "start": "=addDays(Date('11/01/2021'),30)"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "elmType": "div",
+          "style": {
+            "display": "flex"
+          },
+          "children": [
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),1)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),1)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),1)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),2)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),2)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),2)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),3)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),3)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),3)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),4)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),4)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),4)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),5)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),5)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),5)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),6)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),6)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),6)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),7)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),7)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),7)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),8)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),8)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),8)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),9)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),9)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),9)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),10)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),10)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),10)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),11)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),11)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),11)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),12)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),12)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),12)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),13)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),13)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),13)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),14)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),14)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),14)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),15)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),15)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),15)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),16)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),16)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),16)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),17)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),17)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),17)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),18)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),18)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),18)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),19)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),19)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),19)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),20)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),20)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),20)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),21)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),21)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),21)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),22)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),22)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),22)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),23)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),23)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),23)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),24)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),24)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),24)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),25)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),25)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),25)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),26)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),26)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),26)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),27)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),27)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),27)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),28)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),28)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),28)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),29)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),29)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),29)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),30)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),30)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),30)"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "elmType": "div",
+          "style": {
+            "display": "flex"
+          },
+          "children": [
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),1)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),1)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),1)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),2)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),2)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),2)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),3)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),3)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),3)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),4)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),4)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),4)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),5)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),5)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),5)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),6)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),6)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),6)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),7)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),7)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),7)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),8)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),8)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),8)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),9)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),9)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),9)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),10)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),10)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),10)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),11)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),11)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),11)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),12)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),12)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),12)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),13)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),13)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),13)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),14)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),14)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),14)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),15)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),15)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),15)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),16)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),16)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),16)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),17)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),17)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),17)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),18)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),18)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),18)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),19)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),19)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),19)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),20)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),20)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),20)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),21)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),21)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),21)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),22)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),22)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),22)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),23)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),23)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),23)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),24)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),24)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),24)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),25)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),25)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),25)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),26)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),26)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),26)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),27)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),27)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),27)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),28)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),28)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),28)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),29)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),29)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),29)"
+                }
+              }
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "width": "10px",
+                "height": "10px",
+                "background-color": "=if((addDays(Date('11/01/2021'),30)>=[$start]), if(([$end]>=addDays(Date('11/01/2021'),30)),'red','transparent'),'transparent')"
+              },
+              "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                  "end": "=addDays(Date('11/01/2021'),30)"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
