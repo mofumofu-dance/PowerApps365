@@ -3,5 +3,5 @@
 # Manually managing azure-functions-worker may cause unexpected issues
 
 azure-functions
-Pillow==8.3.2
+Pillow==9.0.0
 pybase64
