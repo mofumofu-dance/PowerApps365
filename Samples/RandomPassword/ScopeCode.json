@@ -1,0 +1,150 @@
+{
+    "id": "80be666b-9cbf-4c29-9a18-0a6f-a7e30e92",
+    "brandColor": "#8C3900",
+    "connectionReferences": {},
+    "connectorDisplayName": "Control",
+    "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDMyIDMyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KIDxwYXRoIGQ9Im0wIDBoMzJ2MzJoLTMyeiIgZmlsbD0iIzhDMzkwMCIvPg0KIDxwYXRoIGQ9Im04IDEwaDE2djEyaC0xNnptMTUgMTF2LTEwaC0xNHYxMHptLTItOHY2aC0xMHYtNnptLTEgNXYtNGgtOHY0eiIgZmlsbD0iI2ZmZiIvPg0KPC9zdmc+DQo=",
+    "isTrigger": false,
+    "operationName": "Scope",
+    "operationDefinition": {
+        "type": "Scope",
+        "actions": {
+            "PasswordLength": {
+                "type": "Compose",
+                "inputs": 10,
+                "runAfter": {},
+                "metadata": {
+                    "operationMetadataId": "6fa28730-a071-4097-9fc4-64bdeb9309f4"
+                }
+            },
+            "SourceCharacter": {
+                "type": "Compose",
+                "inputs": "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
+                "runAfter": {
+                    "PasswordLength": [
+                        "Succeeded"
+                    ]
+                },
+                "metadata": {
+                    "operationMetadataId": "e4163daa-41bc-4176-9b2c-44e8b3874366"
+                }
+            },
+            "Chars_from_each_type": {
+                "type": "Compose",
+                "inputs": [
+                    {
+                        "order": 0,
+                        "char": "@substring(outputs('SourceCharacter'),rand(0,10),1)"
+                    },
+                    {
+                        "order": 1,
+                        "char": "@substring(outputs('SourceCharacter'),rand(10,36),1)"
+                    },
+                    {
+                        "order": 2,
+                        "char": "@substring(outputs('SourceCharacter'),rand(36,62),1)"
+                    }
+                ],
+                "runAfter": {
+                    "SourceCharacter": [
+                        "Succeeded"
+                    ]
+                },
+                "metadata": {
+                    "operationMetadataId": "3c2526af-8363-49db-8ac2-c3660af293fd"
+                }
+            },
+            "Random_characters": {
+                "type": "Select",
+                "inputs": {
+                    "from": "@range(3,sub(int(outputs('PasswordLength')),3))",
+                    "select": {
+                        "order": "@item()",
+                        "char": "@substring(outputs('SourceCharacter'),rand(0,62),1)"
+                    }
+                },
+                "runAfter": {
+                    "Chars_from_each_type": [
+                        "Succeeded"
+                    ]
+                },
+                "metadata": {
+                    "operationMetadataId": "58023cf5-68fe-432f-aab0-d0b0e15c2016"
+                }
+            },
+            "Union": {
+                "type": "Compose",
+                "inputs": "@union(outputs('Chars_from_each_type'), body('Random_characters'))",
+                "runAfter": {
+                    "Random_characters": [
+                        "Succeeded"
+                    ]
+                },
+                "metadata": {
+                    "operationMetadataId": "4536ff77-529a-4767-975a-03fb338ea627"
+                }
+            },
+            "Generate_random_array": {
+                "type": "Select",
+                "inputs": {
+                    "from": "@range(0,mul(int(outputs('PasswordLength')),100))",
+                    "select": "@rand(0,int(outputs('PasswordLength')))"
+                },
+                "runAfter": {
+                    "Union": [
+                        "Succeeded"
+                    ]
+                },
+                "metadata": {
+                    "operationMetadataId": "c4a8f01b-3cf2-4cbb-97c8-8bba406c532f"
+                }
+            },
+            "Generate_random_order": {
+                "type": "Compose",
+                "inputs": "@union(body('Generate_random_array'),range(0,int(outputs('PasswordLength'))))",
+                "runAfter": {
+                    "Generate_random_array": [
+                        "Succeeded"
+                    ]
+                },
+                "metadata": {
+                    "operationMetadataId": "5ae06007-c555-433c-b2d9-83150c2e8f3f"
+                }
+            },
+            "Shuffle_Array": {
+                "type": "Select",
+                "inputs": {
+                    "from": "@outputs('Generate_random_order')",
+                    "select": "@outputs('Union')?[item()]?['char']"
+                },
+                "runAfter": {
+                    "Generate_random_order": [
+                        "Succeeded"
+                    ]
+                },
+                "metadata": {
+                    "operationMetadataId": "6a5a2dc7-c3c4-4cc1-b519-6c5b7e28830a"
+                }
+            },
+            "Join": {
+                "type": "Join",
+                "inputs": {
+                    "from": "@body('Shuffle_Array')",
+                    "joinWith": "@{null}"
+                },
+                "runAfter": {
+                    "Shuffle_Array": [
+                        "Succeeded"
+                    ]
+                },
+                "metadata": {
+                    "operationMetadataId": "df79c640-7475-464d-be31-1b9732fb9ed1"
+                }
+            }
+        },
+        "runAfter": {},
+        "metadata": {
+            "operationMetadataId": "9aaec4e4-4f44-4118-92b4-73912b556163"
+        }
+    }
+}
