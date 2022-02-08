@@ -1,0 +1,252 @@
+{
+  "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "actions": {
+          "Append_to_string_variable_4": {
+              "inputs": {
+                  "name": "ScanedText",
+                  "value": "@last(body('Query_documents_V5')?['value'])?['text']"
+              },
+              "runAfter": {
+                  "For_each_2": [
+                      "Succeeded"
+                  ]
+              },
+              "type": "AppendToStringVariable"
+          },
+          "Compose": {
+              "inputs": "@guid()",
+              "runAfter": {
+                  "HTTP_2": [
+                      "Succeeded"
+                  ]
+              },
+              "type": "Compose"
+          },
+          "Compose_2": {
+              "inputs": "@variables('ScanedText')",
+              "runAfter": {
+                  "Append_to_string_variable_4": [
+                      "Succeeded"
+                  ]
+              },
+              "type": "Compose"
+          },
+          "Delay": {
+              "inputs": {
+                  "interval": {
+                      "count": 20,
+                      "unit": "Second"
+                  }
+              },
+              "runAfter": {
+                  "Scan_Image": [
+                      "Succeeded"
+                  ]
+              },
+              "type": "Wait"
+          },
+          "For_each": {
+              "actions": {
+                  "Create_or_update_document_(V3)": {
+                      "inputs": {
+                          "body": {
+                              "id": "@{guid()}",
+                              "runId": "@{outputs('Compose')}",
+                              "text": "@{items('For_each')?['text']}",
+                              "txtLeft": "@item()?['boundingBox']?[0]",
+                              "txtRight": "@item()?['boundingBox']?[2]",
+                              "txtTop": "@item()?['boundingBox']?[1]"
+                          },
+                          "host": {
+                              "connection": {
+                                  "name": "@parameters('$connections')['documentdb']['connectionId']"
+                              }
+                          },
+                          "method": "post",
+                          "path": "/v2/cosmosdb/@{encodeURIComponent('AccountNameFromSettings')}/dbs/@{encodeURIComponent('LogicApps')}/colls/@{encodeURIComponent('ReadResults')}/docs"
+                      },
+                      "runAfter": {},
+                      "type": "ApiConnection"
+                  }
+              },
+              "foreach": "@first(body('HTTP_2')?['analyzeResult']?['readResults'])?['lines']",
+              "runAfter": {
+                  "Compose": [
+                      "Succeeded"
+                  ]
+              },
+              "type": "Foreach"
+          },
+          "For_each_2": {
+              "actions": {
+                  "Append_to_string_variable": {
+                      "inputs": {
+                          "name": "ScanedText",
+                          "value": "@body('Query_documents_V5')?['value']?[item()]?['text']"
+                      },
+                      "runAfter": {},
+                      "type": "AppendToStringVariable"
+                  },
+                  "Condition": {
+                      "actions": {
+                          "Append_to_string_variable_2": {
+                              "inputs": {
+                                  "name": "ScanedText",
+                                  "value": "@decodeUriComponent('%0D%0A')"
+                              },
+                              "runAfter": {},
+                              "type": "AppendToStringVariable"
+                          }
+                      },
+                      "else": {
+                          "actions": {
+                              "Append_to_string_variable_3": {
+                                  "inputs": {
+                                      "name": "ScanedText",
+                                      "value": " "
+                                  },
+                                  "runAfter": {},
+                                  "type": "AppendToStringVariable"
+                              }
+                          }
+                      },
+                      "expression": {
+                          "and": [
+                              {
+                                  "greater": [
+                                      "@body('Query_documents_V5')?['value']?[item()]?['txtRight']",
+                                      "@body('Query_documents_V5')?['value']?[add(item(),1)]?['txtLeft']"
+                                  ]
+                              }
+                          ]
+                      },
+                      "runAfter": {
+                          "Append_to_string_variable": [
+                              "Succeeded"
+                          ]
+                      },
+                      "type": "If"
+                  }
+              },
+              "foreach": "@range(0,sub(length(body('Query_documents_V5')?['value']),1))",
+              "runAfter": {
+                  "Initialize_variable": [
+                      "Succeeded"
+                  ]
+              },
+              "runtimeConfiguration": {
+                  "concurrency": {
+                      "repetitions": 1
+                  }
+              },
+              "type": "Foreach"
+          },
+          "Get_Image": {
+              "inputs": {
+                  "method": "GET",
+                  "uri": "https://raw.githubusercontent.com/mofumofu-dance/PowerApps365/master/media/ocr_source.jpg"
+              },
+              "runAfter": {},
+              "type": "Http"
+          },
+          "HTTP_2": {
+              "inputs": {
+                  "headers": {
+                      "Ocp-Apim-Subscription-Key": "0d1b123123124b5d850e396beefb2"
+                  },
+                  "method": "GET",
+                  "uri": "@{outputs('Scan_Image')['headers']?['operation-location']}"
+              },
+              "runAfter": {
+                  "Delay": [
+                      "Succeeded"
+                  ]
+              },
+              "type": "Http"
+          },
+          "Initialize_variable": {
+              "inputs": {
+                  "variables": [
+                      {
+                          "name": "ScanedText",
+                          "type": "string"
+                      }
+                  ]
+              },
+              "runAfter": {
+                  "Query_documents_V5": [
+                      "Succeeded"
+                  ]
+              },
+              "type": "InitializeVariable"
+          },
+          "Query_documents_V5": {
+              "inputs": {
+                  "host": {
+                      "connection": {
+                          "name": "@parameters('$connections')['documentdb']['connectionId']"
+                      }
+                  },
+                  "method": "get",
+                  "path": "/v5/cosmosdb/@{encodeURIComponent('AccountNameFromSettings')}/dbs/@{encodeURIComponent('LogicApps')}/colls/@{encodeURIComponent('ReadResults')}/query",
+                  "queries": {
+                      "partitionKey": "@{outputs('Compose')}",
+                      "queryText": "select c.text, c.txtTop, c.txtLeft, c.txtRight from c order by c.txtTop asc, c.txtLeft asc"
+                  }
+              },
+              "runAfter": {
+                  "For_each": [
+                      "Succeeded"
+                  ]
+              },
+              "type": "ApiConnection"
+          },
+          "Scan_Image": {
+              "inputs": {
+                  "body": "@body('Get_Image')",
+                  "headers": {
+                      "Content-Type": "application/octet-stream",
+                      "Ocp-Apim-Subscription-Key": "0d1123123123850e396beefb2"
+                  },
+                  "method": "POST",
+                  "uri": "https://comp-vision-hiro.cognitiveservices.azure.com/vision/v3.2/read/analyze?language=ja&readingOrder=natural&model-version=latest"
+              },
+              "runAfter": {
+                  "Get_Image": [
+                      "Succeeded"
+                  ]
+              },
+              "type": "Http"
+          }
+      },
+      "contentVersion": "1.0.0.0",
+      "outputs": {},
+      "parameters": {
+          "$connections": {
+              "defaultValue": {},
+              "type": "Object"
+          }
+      },
+      "triggers": {
+          "manual": {
+              "inputs": {
+                  "schema": {}
+              },
+              "kind": "Http",
+              "type": "Request"
+          }
+      }
+  },
+  "parameters": {
+      "$connections": {
+          "value": {
+              "documentdb": {
+                  "connectionId": "/subscriptions/c574esffsfsfs-f40dd9c721eb/resourceGroups/LogicApps/providers/Microsoft.Web/connections/documentdb",
+                  "connectionName": "documentdb",
+                  "id": "/subscriptions/c5sfsfsada6-8de0-f40dd9c721eb/providers/Microsoft.Web/locations/japaneast/managedApis/documentdb"
+              }
+          }
+      }
+  }
+}
