@@ -1,0 +1,51 @@
+{
+    "type": "object",
+    "properties": {
+        "Created": {
+            "type": "string"
+        },
+        "IsCurrentVersion": {
+            "type": "boolean"
+        },
+        "VersionId": {
+            "type": "integer"
+        },
+        "VersionLabel": {
+            "type": "string"
+        },
+        "ID": {
+            "type": "integer"
+        },
+        "Title": {
+            "type": "string"
+        },
+        "Modified": {
+            "type": "string"
+        },
+        "CurrentlyAssignedUser": {
+            "type": "object",
+            "properties": {
+                "__metadata": {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "LookupId": {
+                    "type": "integer",
+                    "title":"CurrentlyAssignedUser_Id"
+                },
+                "LookupValue": {
+                    "type": "string",
+                    "title":"CurrentlyAssignedUser_Value"
+                },
+                "Email": {
+                    "type": "string",
+                    "title":"CurrentlyAssignedUser_Email"
+                }
+            }
+        }
+    }
+}
