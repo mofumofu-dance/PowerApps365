@@ -1,4 +1,7 @@
 けいさんドリルのアプリです。
+
+msappファイルの取り込みかたは https://powerusers.microsoft.com/t5/Building-Power-Apps/How-to-import-msapp-file/td-p/134261
+
 1年生向けと思って作っていますが、進度が合わない場合は、飛ばしたい画面を消して、エラーの出ている数式を修正してください。
 （ボタン押したときの`Navigate`関数で、遷移先の画面がないよエラーになるはず）
 
